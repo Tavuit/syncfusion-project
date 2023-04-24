@@ -1,0 +1,932 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?1f6ce8ad16db9cedeb6d2af9cad595b9") format("truetype"),
+    url("./flaticon.woff?1f6ce8ad16db9cedeb6d2af9cad595b9") format("woff"),
+    url("./flaticon.woff2?1f6ce8ad16db9cedeb6d2af9cad595b9") format("woff2"),
+    url("./flaticon.eot?1f6ce8ad16db9cedeb6d2af9cad595b9#iefix") format("embedded-opentype"),
+    url("./flaticon.svg?1f6ce8ad16db9cedeb6d2af9cad595b9#flaticon") format("svg");
+}
+
+.icon-40:before {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-paste:before {
+    content: url('image/icon-paste1.jpg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-copy:before {
+    content: url('image/clipboardcopy.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-scissors:before {
+    content: url('image/menu/home/ClipboardCut.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-delete:before {
+    content: url('image/menu/home/clipboardelete.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-share:before {
+    content: url('image/copy-to-clipboard.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-redo-arrow1:before {
+    content: url('image/menu/home/undo1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-redo-arrow-large:before {
+    content: url('image/menu/edit/undolastactionedit.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.fill-menu:before {
+    content: url('image/menu/home/fill-menu.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.line-menu:before {
+    content: url('image/menu/home/linemenu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.text-menu:before {
+    content: url('image/menu/home/text-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.start-menu:before {
+    content: url('image/menu/home/start-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.end-menu:before {
+    content: url('image/menu/home/end-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.point-menu:before {
+    content: url('image/menu/home/point-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.text-menu2:before {
+    content: url('image/menu/home/text-menu2.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.line-menu2:before {
+    content: url('image/menu/home/line-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.autoconnector:before {
+    content: url('image/autoconnector.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.node-menu-home-list:before {
+    content: url('image/node-menu.svg');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.container-menu-insert:before {
+    content: url('image/container-menu-insert.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.list-menu-insert:before {
+    content: url('image/list-menu-insert.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.picture-menu-insert:before {
+    content: url('image/picture-menu-insert.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.copy-clipboard:before {
+    content: url('image/copy-to-clipboard.svg');
+    position: relative;
+    left: -10px;
+    top: -30px;
+}
+
+.function:before {
+    content: url('image/copy-to-clipboard.svg');
+    position: relative;
+    left: -10px;
+    top: -30px;
+}
+
+.application:before {
+    content: url('image/copy-to-clipboard.svg');
+    position: relative;
+    left: -10px;
+    top: -30px;
+}
+
+.speak-logic-menu-Function_Icon:before {
+    content: url('image/menu/speaklogic/Function_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Word_Icon:before {
+    content: url('image/menu/speaklogic/Word_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Application_Icon:before {
+    content: url('image/menu/speaklogic/Application_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Relationship_Icon:before {
+    content: url('image/menu/speaklogic/Relationship_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Derivative_Icon:before {
+    content: url('image/menu/speaklogic/Derivative_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Function2_Icon:before {
+    content: url('image/menu/speaklogic/Function2_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Fundamental1_Icon:before {
+    content: url('image/menu/speaklogic/Fundamental1_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Fundamental2_Icon:before {
+    content: url('image/menu/speaklogic/Fundamental2_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Instrusment_Icon:before {
+    content: url('image/menu/speaklogic/Instrusment_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Stability_Icon:before {
+    content: url('image/menu/speaklogic/Stability_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Theorem_Icon:before {
+    content: url('image/menu/speaklogic/Theorem_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Theory1_Icon:before {
+    content: url('image/menu/speaklogic/Theory1_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Theory2_Icon:before {
+    content: url('image/menu/speaklogic/Theory2_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.speak-logic-menu-Time_Icon:before {
+    content: url('image/menu/speaklogic/Time_Icon1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.selectedentityedit:before {
+    content: url('image/menu/edit/selectedentityedit.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.startproject:before {
+    content: url('image/menu/project/startproject1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.error:before {
+    content: url('image/error.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.optionmix:before {
+    content: url('image/optionmix1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.captureimageproject:before {
+    content: url('image/captureimageproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.editimageproject:before {
+    content: url('image/editimageproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.reconrdvideoproject:before {
+    content: url('image/reconrdvideoproject1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.editvideoproject:before {
+    content: url('image/editvideoproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.recordaudioproject:before {
+    content: url('image/recordaudioproject1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.settingproject:before {
+    content: url('image/settingproject1.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.simulationproject:before {
+    content: url('image/simulationproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.settingproject1:before {
+    content: url('image/settingproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.closeproject:before {
+    content: url('image/closeproject.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.subfunction:before {
+    content: url('image/subfunction.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.subapplication:before {
+    content: url('image/subapplication.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.subresult:before {
+    content: url('image/subresult.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.entityview:before {
+    content: url('image/entityview.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.panzoomview:before {
+    content: url('image/panzoomview.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.modelview:before {
+    content: url('image/modelview.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.tasklistview:before {
+    content: url('image/tasklistview.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+
+.showhidemodelsview:before {
+    content: url('image/showhidemodelsview.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-brackets:before {
+    content: url('image/menu/equations/brackets.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-decoratedEquation:before {
+    content: url('image/menu/equations/decoratedEquation.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-sumproduct:before {
+    content: url('image/menu/equations/sumproduct.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-integrals:before {
+    content: url('image/menu/equations/integrals.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-script:before {
+    content: url('image/menu/equations/script.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-divroot:before {
+    content: url('image/menu/equations/divroot.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-arrowEquation:before {
+    content: url('image/menu/equations/arrowEquation.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-underbar:before {
+    content: url('image/menu/equations/underbar.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-decoratedCharacter:before {
+    content: url('image/menu/equations/decoratedCharacter.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-matrix:before {
+    content: url('image/menu/equations/matrix.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-boxes:before {
+    content: url('image/menu/equations/boxes.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-symbols:before {
+    content: url('image/menu/equations/symbols.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-greekcapital:before {
+    content: url('image/menu/equations/greekcapital.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-greeksmall:before {
+    content: url('image/menu/equations/greeksmall.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.equation-menu-arrows:before {
+    content: url('image/menu/equations/arrows.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.communicationdomain:before {
+    content: url('image/communicationdomain.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.theorydomain:before {
+    content: url('image/theorydomain.png');
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.flaticon-back-arrow:before {
+    content: "\f107";
+    font-family: flaticon;
+}
+
+.flaticon-italic:before {
+    content: "\f108";
+    font-family: flaticon;
+}
+
+.flaticon-underlined-text:before {
+    content: "\f109";
+    font-family: flaticon;
+}
+
+.flaticon-strikethrough:before {
+    content: "\f10a";
+    font-family: flaticon;
+}
+
+.flaticon-left-align:before {
+    content: "\f10b";
+    font-family: flaticon;
+}
+
+.flaticon-center-align:before {
+    content: "\f10c";
+    font-family: flaticon;
+}
+
+.flaticon-right-align:before {
+    content: "\f10d";
+    font-family: flaticon;
+}
+
+.flaticon-full-align:before {
+    content: "\f039";
+    font-family: flaticon;
+}
+
+.flaticon-bucket:before {
+    content: "\f10e";
+    font-family: flaticon;
+}
+
+.flaticon-bucket-large:before {
+    content: "\f10e";
+    font-size: 20px;
+    color: grey;
+    font-family: flaticon;
+}
+
+.flaticon-bucket-large:before {
+    content: "\f10e";
+    font-size: 20px;
+    color: grey;
+    font-family: flaticon;
+}
+
+.flaticon-pencil-drawing-a-line:before {
+    content: "\f10f";
+    font-family: flaticon;
+}
+
+.flaticon-pencil-drawing-a-line-large:before {
+    content: "\f10f";
+    font-size: 20px;
+    color: grey;
+    font-family: flaticon;
+}
+
+.flaticon-text-box:before {
+    content: "\f110";
+    font-family: flaticon;
+}
+
+.flaticon-text-box-large:before {
+    content: "\f110";
+    font-size: 20px;
+    color: grey;
+    font-family: flaticon;
+}
+
+.flaticon-cursor:before {
+    content: "\f111";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-capital-a:before {
+    content: "\f112";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-diagonal-line:before {
+    content: "\f113";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-rectangular-shape-outline:before {
+    content: "\f114";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-ellipse-outline-shape-variant:before {
+    content: "\f115";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-curved-line:before {
+    content: "\f116";
+    font-family: flaticon;
+}
+
+.flaticon-business-ascendant-graphic-line:before {
+    content: "\f117";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-line:before {
+    content: "\f118";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-right-arrow:before {
+    content: "\f119";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-double-arrow:before {
+    content: "\f11a";
+    font-size: 20px;
+    font-family: flaticon;
+}
+
+.flaticon-double-arrow-large:before {
+    content: "\f11a";
+    font-size: 20px;
+    color: grey;
+    font-family: flaticon;
+}
+
+.flaticon-double-arrows:before {
+    content: "\f11b";
+    font-family: flaticon;
+}
+
+.flaticon-bold:before {
+    content: "\f11c";
+    font-family: flaticon;
+}
+
+.flaticon-click:before {
+    content: "\f11d";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-windows-couple:before {
+    content: "\f11e";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-loupe:before {
+    content: "\f11f";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-open:before {
+    content: "\f120";
+    font-size: 24px;
+    font-family: flaticon;
+}
+
+.flaticon-relation:before {
+    content: "\f121";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-compare:before {
+    content: "\f122";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-is-not-equal-to-mathematical-symbol:before {
+    content: "\f123";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-puzzle:before {
+    content: "\f124";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-select:before {
+    content: "\f125";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-left-arrow:before {
+    content: "\f126";
+    font-family: flaticon;
+}
+
+.flaticon-right-arrow-1:before {
+    content: "\f127";
+    font-family: flaticon;
+}
+
+.flaticon-down-arrow:before {
+    content: "\f128";
+    font-family: flaticon;
+}
+
+.flaticon-up-arrow:before {
+    content: "\f129";
+    font-family: flaticon;
+}
+
+.flaticon-align-left:before {
+    content: "\f12a";
+    font-family: flaticon;
+}
+
+.flaticon-left-alignment:before {
+    content: "\f12b";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-sort:before {
+    content: "\f12c";
+    font-family: flaticon;
+}
+
+.flaticon-top-alignment:before {
+    content: "\f12d";
+    font-family: flaticon;
+}
+
+.flaticon-top-alignment-large:before {
+    content: "\f12d";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-align-center:before {
+    content: "\f12e";
+    font-family: flaticon;
+}
+
+.flaticon-width:before {
+    content: "\f12f";
+    font-family: flaticon;
+}
+
+.flaticon-height:before {
+    content: "\f130";
+    font-family: flaticon;
+}
+
+.flaticon-size-square:before {
+    content: "\f131";
+    font-family: flaticon;
+}
+
+.flaticon-scale:before {
+    content: "\f132";
+    font-family: flaticon;
+}
+
+.flaticon-axis:before {
+    content: "\f133";
+    font-family: flaticon;
+}
+
+.flaticon-website:before {
+    content: "\f134";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-align:before {
+    content: "\f135";
+    font-family: flaticon;
+}
+
+.flaticon-group:before {
+    content: "\f136";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-tile:before {
+    content: "\f137";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-user:before {
+    content: "\f138";
+    font-family: flaticon;
+}
+
+.flaticon-group-1:before {
+    content: "\f139";
+    font-family: flaticon;
+}
+
+.flaticon-cancel:before {
+    content: "\f13a";
+    font-family: flaticon;
+}
+
+.flaticon-exclamation:before {
+    content: "\f13b";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-tools:before {
+    content: "\f13c";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-view:before {
+    content: "\f13d";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-letter-r:before {
+    content: "\f13e";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-letter-a:before {
+    content: "\f13f";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-letter-f:before {
+    content: "\f140";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-website-1:before {
+    content: "\f141";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-home-icon-silhouette:before {
+    content: "\f142";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-paper:before {
+    content: "\f143";
+    font-family: flaticon;
+}
+
+.flaticon-back-arrow-large:before {
+    content: "\f107";
+    font-size: 25px;
+    font-family: flaticon;
+}
+
+.flaticon-grid:before {
+    content: "\f144";
+    font-family: flaticon;
+}

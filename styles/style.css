@@ -1,0 +1,908 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+}
+
+tspan {
+    font-family: serif;
+}
+*::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #dddddd;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #777777;
+}
+
+:root {
+    height: 100vh;
+}
+
+html,
+body,
+#app-content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    all: revert;
+}
+#Ribbon {
+    height: 158px;
+    font-size: 5px;
+}
+
+#container {
+    height: calc(100% - 150px);
+    width: 100%;
+    padding: 2px 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 5px 4fr 5px 1fr;
+}
+
+#left-section,
+#right-section,
+#middle-section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 99.2%;
+    overflow: scroll;
+}
+
+#left-section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: 1px solid darkgray;
+}
+
+#middle-section {
+    border: 1px solid darkgray;
+}
+
+#right-section {
+    overflow: hidden;
+}
+
+#pageOptionList {
+    background-color: whitesmoke;
+    border-bottom: 1px solid darkgrey;
+    width: 100%;
+    height: 25px;
+}
+
+#left-drag-bar {
+    background-color: white;
+    cursor: ew-resize;
+}
+
+#right-drag-bar {
+    background-color: white;
+    cursor: ew-resize;
+}
+.e-btn {
+    text-transform: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol-text-element {
+    text-align: center;
+    font-size: 10px;
+    font-weight: Bold;
+    line-height: 90%;
+}
+
+.point-circle {
+    transform: scale(0.2, 0.2) translate(10px, 10px);
+}
+
+.list-container ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.padding-zero {
+    padding: 0 !important;
+}
+
+#model-container {
+    overflow-x: scroll;
+    font-size: 14px;
+    border: 1px solid darkgrey;
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+#task-list-container {
+    height: calc(50% - 5px);
+    border: 1px solid darkgrey;
+}
+
+.model-list {
+    margin: 0px;
+}
+
+.list-arrow::before {
+    content: "\25B6";
+    color: black;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.list-open::before {
+    transform: rotate(45deg);
+}
+
+.model-list li,
+.model-button {
+    padding: 5px;
+    height: 40px;
+    min-width: max-content;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.model-list li:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.nested-list {
+    display: none;
+}
+
+.list-icon {
+    height: 25px;
+    width: 25px;
+    margin: 0 5px;
+}
+
+.page-tab {
+    height: 25px;
+    padding: 5px;
+    border: 1px solid black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 2px;
+    font-size: 12px;
+    width: calc(max-content);
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-text {
+    padding-right: 7px;
+    display: inline-flex;
+    align-items: center;
+    height: 25px;
+}
+
+.button-cross::after {
+    content: "\2716";
+    cursor: pointer;
+}
+
+.button-cross:hover {
+    color: crimson;
+}
+.active-model-page {
+    font-size: 13px;
+    font-weight: bolder;
+    background-color: white;
+}
+
+#active-context-menu {
+    padding: 0;
+    height: fit-content;
+}
+.context-list {
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: left;
+    list-style: none;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    height: 30px;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.context-list:hover {
+    background-color: #dddddd;
+}
+
+.has-open-context-menu {
+    background-color: #dddddd;
+}
+
+.other-form {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -50px;
+    margin-right: -125px;
+    border: black solid 1px;
+    height: 120px;
+    width: 250px;
+    background-color: white;
+}
+
+.dialog-title {
+    background-color: #0ab352;
+    width: 100%;
+    font-size: 14px;
+    color: whitesmoke;
+    height: 25px;
+}
+
+.dialog-title > span {
+    line-height: 25px;
+}
+.other-label {
+    display: block;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.other-input {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: smaller;
+    width: 85%;
+}
+
+.title-text {
+    padding-left: 5px;
+    width: 92%;
+    display: inline-block;
+}
+
+.cross-button {
+    width: 8%;
+    display: inline-block;
+    background-color: rgb(253, 54, 39);
+    text-align: center;
+    user-select: none;
+    line-height: 25px;
+}
+.cross-button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.other-submit {
+    margin-top: 5px;
+    margin-left: 80%;
+    width: 40px;
+    height: 20px;
+}
+
+.disabled-button {
+    background-color: #cccccc;
+    color: #777777;
+}
+
+.disabled-button:hover {
+    cursor: default;
+}
+
+.e-btn:not(.e-inputbtn),
+.e-tbtn,
+.e-split-btn {
+    font-size: 12px;
+    border: 1px solid #dbdbdb;
+}
+.e-btn,
+.e-css.e-btn {
+    padding: 6px 12px;
+}
+
+.e-menu.e-context {
+    width: 225px;
+}
+
+.e-contextmenu-wrapper ul .e-menu-item,
+.e-contextmenu-container ul .e-menu-item {
+    height: max-content;
+    line-height: 24px;
+}
+
+#diagram_contextMenu {
+    font-size: 12px;
+    color: #444444;
+}
+
+#subListDiagram {
+    font-size: 12px;
+    color: #444444;
+}
+
+#subListDiagram li {
+    height: max-content;
+    line-height: 24px;
+}
+
+.e-ribbon .e-active-content {
+    z-index: 999;
+}
+
+.grey-onhover:hover {
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+.hidden {
+    display: none;
+}
+
+#activeDialog {
+    width: 350px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    margin-left: -170px;
+    left: 50%;
+    z-index: 1000;
+}
+
+.dialog-container {
+    width: 330px;
+    max-height: 370px;
+    margin-top: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: smaller !important;
+}
+
+#activeDialog ul {
+    padding-left: 10px;
+}
+
+.btn-primary {
+    background-color: #0ab352;
+}
+
+.btn-primary:hover {
+    background-color: #0ab500;
+}
+.e-ribbon .e-header > .e-apptab .e-menu {
+    background: #0ab352;
+}
+
+.e-ribbon.e-js .e-header .e-active.e-tab a,
+.e-ribbon.e-js .e-header .e-active.e-contextualtabset a {
+    color: #0ab352;
+}
+.e-ribbon.e-js .e-header .e-active.e-tab a {
+    height: 100%;
+}
+
+.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state > .e-acrdn-header .e-acrdn-header-icon,
+.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state > .e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-select.e-expand-state > .e-acrdn-header .e-acrdn-header-icon,
+.e-accordion .e-acrdn-item.e-select.e-expand-state > .e-acrdn-header .e-acrdn-header-content {
+    color: #0ab352;
+}
+
+.e-ribbon.e-js .e-header li.e-select:not(.e-apptab) a:hover {
+    color: #0ab352;
+}
+
+.custom-btn {
+    color: whitesmoke;
+    background-color: #0ab352;
+    margin-top: 7px;
+    display: inline-block;
+    margin-left: calc(100% - 50px);
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.custom-btn:hover {
+    color: white;
+}
+
+.loading-overlay {
+    visibility: visible;
+    z-index: 9999;
+    position: fixed;
+    display: flex;
+    background-color: rgba(255, 255, 255, 1);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+.hidden {
+    visibility: hidden !important;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.w-112px {
+    width: 112px;
+}
+.w-200px {
+    width: 200px;
+}
+.w-100 {
+    width: 100%;
+}
+.flex-1 {
+    flex: 1;
+}
+.d-flex {
+    display: flex;
+    align-items: center !important;
+}
+.group-button-dialog-group-of-people {
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+.group-button-dialog-group-of-people button {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+.m-r-4 {
+    margin-right: 4px;
+}
+.m-r-8 {
+    margin-right: 8px;
+}
+.m-l-8 {
+    margin-left: 8px;
+}
+.m-b-8 {
+    margin-bottom: 8px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+.p-r-20 {
+    padding-right: 20px;
+}
+.p-l-20 {
+    padding-left: 20px;
+}
+.line-height-20 {
+    line-height: 20px;
+}
+.e-dialog .e-dlg-header {
+    font-size: 14px;
+}
+.e-dialog .e-dlg-header-content,
+.e-dialog .e-dlg-content {
+    padding: 8px;
+}
+.e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+    border-radius: 0;
+    left: 4px;
+}
+.e-dialog .e-footer-content {
+    padding-top: 0;
+}
+.justify-content-space-between {
+    justify-content: space-between;
+}
+#dialogGroupofPeople,
+#dialogNodeTableComm,
+#dialogContinuityPerson,
+#dialogMainArea,
+#dialogLabel {
+    padding: 8px;
+    background: #0d6efd59;
+}
+.copy-clipboard {
+    background-image: url("/icons/image/clipboardcopy.png");
+    background-size: cover;
+}
+.cut-clipboard {
+    background-image: url("/icons/image/menu/home/ClipboardCut.png");
+    background-size: cover;
+}
+.delete-clipboard {
+    background-image: url("/icons/image/menu/home/clipboardelete.png");
+    background-size: cover;
+}
+.icon-paste {
+    background-image: url("/icons/image/icon-paste.jpg");
+    background-size: cover;
+}
+.copy-to-clipboard {
+    background-image: url("/icons/image/copy-to-clipboard.svg");
+    background-size: cover;
+}
+.icon-undo {
+    background-image: url("/icons/image/menu/home/undo.png");
+    background-size: cover;
+}
+.menu-burger {
+    background-image: url("/icons/image/menu-burger.png");
+    background-size: cover;
+}
+.strikethrough {
+    background-image: url("/icons/image/strikethrough.svg");
+    background-size: cover;
+}
+/*.fill-menu {*/
+/*    background-image: url("/icons/image/menu/home/fill-menu.png");*/
+/*    background-size: cover;*/
+/*}*/
+.line-menu {
+    background-image: url("/icons/image/menu/home/linemenu.svg");
+    background-size: cover;
+}
+.text-menu {
+    background-image: url("/icons/image/menu/home/text-menu.svg");
+    background-size: cover;
+}
+.start-menu {
+    background-image: url("/icons/image/menu/home/start-menu.svg");
+    background-size: cover;
+}
+.end-menu {
+    background-image: url("/icons/image/menu/home/end-menu.svg");
+    background-size: cover;
+}
+.point-menu {
+    background-image: url("/icons/image/menu/home/point-menu.svg");
+    background-size: cover;
+}
+.text-menu2 {
+    background-image: url("/icons/image/menu/home/text-menu2.svg");
+    background-size: cover;
+}
+.line-menu2 {
+    background-image: url("/icons/image/menu/home/line-menu.svg");
+    background-size: cover;
+}
+.line-menu2 {
+    background-image: url("/icons/image/menu/home/line-menu.svg");
+    background-size: cover;
+}
+.autoconnector {
+    background-image: url("/icons/image/autoconnector.svg");
+    background-size: cover;
+}
+.node-menu {
+    background-image: url("/icons/image/node-menu.svg");
+    background-size: cover;
+}
+
+.container-menu-insert {
+    background-image: url("/icons/image/container-menu-insert.png");
+    background-size: cover;
+}
+/*.equation-menu-brackets {*/
+/*    background-image: url("/icons/image/menu/equations/brackets.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-decoratedEquation {*/
+/*    background-image: url("/icons/image/menu/equations/decoratedEquation.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 25px;*/
+/*}*/
+/*.equation-menu-sumproduct {*/
+/*    background-image: url("/icons/image/menu/equations/sumproduct.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-integrals {*/
+/*    background-image: url("/icons/image/menu/equations/integrals.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-arrowEquation {*/
+/*    background-image: url("/icons/image/menu/equations/arrowEquation.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-underbar {*/
+/*    background-image: url("/icons/image/menu/equations/underbar.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-decoratedCharacter {*/
+/*    background-image: url("/icons/image/menu/equations/decoratedCharacter.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-matrix {*/
+/*    background-image: url("/icons/image/menu/equations/matrix.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-boxes {*/
+/*    background-image: url("/icons/image/menu/equations/boxes.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+
+/*.equation-menu-script {*/
+/*    background-image: url("/icons/image/menu/equations/script.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-divroot {*/
+/*    background-image: url("/icons/image/menu/equations/divroot.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-symbols {*/
+/*    background-image: url("/icons/image/menu/equations/symbols.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-greekcapital {*/
+/*    background-image: url("/icons/image/menu/equations/greekcapital.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-greeksmall {*/
+/*    background-image: url("/icons/image/menu/equations/greeksmall.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+/*.equation-menu-arrows {*/
+/*    background-image: url("/icons/image/menu/equations/arrows.png");*/
+/*    background-size: cover;*/
+/*    width: 65px;*/
+/*    height: 24px;*/
+/*}*/
+.list-menu-insert {
+    background-image: url("/icons/image/list-menu-insert.png");
+    background-size: cover;
+}
+.picture-menu-insert {
+    background-image: url("/icons/image/picture-menu-insert.png");
+    background-size: cover;
+}
+.selectedentityedit {
+    background-image: url("/icons/image/menu/edit/selectedentityedit.png");
+    background-size: cover;
+}
+.undolastactionedit {
+    background-image: url("/icons/image/menu/edit/undolastactionedit.png");
+    background-size: cover;
+}
+.startproject {
+    background-image: url("/icons/image/menu/project/startproject.png");
+    background-size: cover;
+}
+.error {
+    background-image: url("/icons/image/error.png");
+    background-size: cover;
+}
+.optionmix {
+    background-image: url("/icons/image/optionmix.png");
+    background-size: cover;
+}
+.captureimageproject {
+    background-image: url("/icons/image/captureimageproject.png");
+    background-size: cover;
+}
+.editimageproject {
+    background-image: url("/icons/image/editimageproject.png");
+    background-size: cover;
+}
+.reconrdvideoproject {
+    background-image: url("/icons/image/reconrdvideoproject.png");
+    background-size: cover;
+}
+.editvideoproject {
+    background-image: url("/icons/image/editvideoproject.png");
+    background-size: cover;
+}
+.recordaudioproject {
+    background-image: url("/icons/image/recordaudioproject.png");
+    background-size: cover;
+}
+.settingproject {
+    background-image: url("/icons/image/settingproject.png");
+    background-size: cover;
+}
+.simulationproject {
+    background-image: url("/icons/image/simulationproject.png");
+    background-size: cover;
+}
+.closeproject {
+    background-image: url("/icons/image/closeproject.png");
+    background-size: cover;
+}
+.openproject {
+    background-image: url("/icons/image/openproject.png");
+    background-size: cover;
+}
+.fittowindownview {
+    background-image: url("/icons/image/fittowindownview.png");
+    background-size: cover;
+}
+.pagewidthview {
+    background-image: url("/icons/image/pagewidthview.png");
+    background-size: cover;
+}
+.subapplication {
+    background-image: url("/icons/image/subapplication.png");
+    background-size: cover;
+}
+.subfunction {
+    background-image: url("/icons/image/subfunction.png");
+    background-size: cover;
+}
+.subresult {
+    background-image: url("/icons/image/subresult.png");
+    background-size: cover;
+}
+.entityview {
+    background-image: url("/icons/image/entityview.png");
+    background-size: cover;
+}
+.panzoomview {
+    background-image: url("/icons/image/panzoomview.png");
+    background-size: cover;
+}
+.modelview {
+    background-image: url("/icons/image/modelview.png");
+    background-size: cover;
+}
+.tasklistview {
+    background-image: url("/icons/image/tasklistview.png");
+    background-size: cover;
+}
+.showhidemodelsview {
+    background-image: url("/icons/image/showhidemodelsview.png");
+    background-size: cover;
+}
+.communicationdomain {
+    background-image: url("/icons/image/communicationdomain.png");
+    background-size: cover;
+}
+.theorydomain {
+    background-image: url("/icons/image/theorydomain.png");
+    background-size: cover;
+}
+.speak-logic-menu-Application_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Application_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Derivative_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Derivative_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Function_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Function_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Function2_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Function2_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Fundamental1_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Fundamental1_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Fundamental2_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Fundamental2_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Instrusment_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Instrusment_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Relationship_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Relationship_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Stability_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Stability_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Theorem_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Theorem_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Theory1_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Theory1_Icon.png");
+    background-size: cover;
+}
+
+.speak-logic-menu-Theory2_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Theory2_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Time_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Time_Icon.png");
+    background-size: cover;
+}
+.speak-logic-menu-Word_Icon {
+    background-image: url("/icons/image/menu/speaklogic/Word_Icon.png");
+    background-size: cover;
+}
+.icon-40 {
+    width: 40px;
+    height: 40px;
+}
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
+.e-btn .e-icon {
+    padding: 0;
+}
+
+.m-l-12 {
+    margin-left: 12px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.width-max-content {
+    width: max-content !important;
+}
+.disabled-custom {
+    opacity: 0.3;
+    pointer-events: none;
+}
+.hr_nay {
+    border-top: 1px solid #000;
+    height: 90px;
+    /* margin-left: -117px; */
+    -moz-transform: rotate(-61deg);
+    -o-transform: rotate(-61deg);
+    -webkit-transform:rotate(-61deg);
+    -ms-transform: rotate(-61deg);
+    width: 80px;
+    transform: rotate(-61deg);
+}

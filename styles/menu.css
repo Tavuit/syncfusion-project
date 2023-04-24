@@ -1,0 +1,225 @@
+#Ribbon_home_Format_content {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.e-innerdivchild {
+    display: flex;
+    align-items: center;
+}
+
+#Ribbon_home_Format_2 {
+    display: flex;
+    align-items: center;
+}
+
+.e-ribGroupContent {
+    height: 70px !important;
+}
+
+#Ribbon_home_UndoAction {
+    width: auto !important;
+}
+
+#Ribbon_home_Annotation_4 .e-button,
+#Ribbon_home_Annotation_5 .e-button {
+    padding: 0;
+}
+
+.flaticon-node-menu-home-list {
+    background-image: url("/icons/image/node-menu.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+#Ribbon_insert_DiagramParts_container .e-splitarrowright {
+    padding: 0 !important;
+}
+
+#Ribbon_insert_DiagramParts_container #Ribbon_containerdrpbtn {
+    padding: 0 !important;
+    height: unset;
+    top: 60px;
+    left: 20px;
+    background: transparent;
+}
+
+#listSubMenucontainerInsert {
+    width: auto;
+    /*padding: 20px;*/
+}
+
+#listSubMenucontainerInsert .listSubMenucontainerInsert {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /*column-gap: 20px;*/
+    /*row-gap: 20px;*/
+}
+
+#listSubMenucontainerInsert .listSubMenucontainerInsert:hover {
+    cursor: pointer;
+}
+
+#Ribbon_insert_DiagramParts_list .e-splitarrowright {
+    padding: 0 !important;
+}
+
+#Ribbon_insert_DiagramParts_list #Ribbon_listdrpbtn {
+    padding: 0 !important;
+    height: unset;
+    top: 60px;
+    left: 16px;
+    background: transparent;
+}
+
+#Ribbon_list .e-btntxt {
+    padding-left: 12px;
+}
+
+#listSubMenuListInsert {
+    width: auto;
+}
+
+#listSubMenuListInsert .listSubMenuListInsert {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#listSubMenuListInsert .title_list_sub_menu_insert {
+    padding: 8px;
+    background: #f0f8ff;
+    margin: 12px 0;
+}
+
+#Ribbon_view_Zoom_1 {
+    display: block;
+}
+
+#Ribbon_view_Zoom_Fit {
+    float: unset;
+}
+
+#Ribbon_view_Zoom_Fit #Ribbon_Fit .e-btn-span {
+    display: flex;
+}
+
+#Ribbon_view_Zoom_PageWidth #Ribbon_PageWidth .e-btn-span {
+    display: flex;
+}
+
+#Ribbon_view_Show_1 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#Ribbon_equations_ .e-splitarrowright {
+    padding: 0 !important;
+}
+
+#Ribbon_equations_ .e-split-btn {
+    padding: 0 !important;
+    height: unset;
+    top: 50px;
+    left: 20px;
+    background: transparent;
+}
+
+#Ribbon_equations_ .e-splitbutton {
+    padding: 4px !important;
+}
+
+.list-sub-menu-equations {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    /*column-gap: 20px;*/
+    /*row-gap: 20px;*/
+    border-bottom: 1px solid;
+    margin-bottom: 12px;
+}
+
+.list-sub-menu-equations:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.list-sub-menu-equations div.align-items-start {
+    padding: 20px;
+}
+
+.list-sub-menu-equations div.align-items-start:hover {
+    cursor: pointer;
+    background-color: #86cbea;
+}
+
+#listSubMenuEuqationsDecorator .list-sub-menu-equations {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#Ribbon_insert .e-split-btn {
+    padding: 0 !important;
+    height: unset;
+    top: 60px;
+    left: 20px;
+    background: transparent;
+}
+
+#Ribbon_insert .e-splitbutton {
+    padding: 4px !important;
+}
+
+#Ribbon_insert .e-split.e-rtl .e-padding.e-splitarrowleft,
+.e-split .e-padding.e-splitarrowright {
+    padding: 0;
+}
+
+.tab-menu-sub-menu-decorator {
+    padding: 20px;
+    display: flex;
+}
+
+.tab-menu-sub-menu-decorator .item-tab-menu {
+    margin-right: 20px;
+}
+
+.tab-menu-sub-menu-decorator .item-active-tab-menu {
+    border-bottom: 1px solid;
+}
+
+#Ribbon_insert_SpeakLogic_1.domain-theory #Ribbon_insert_SpeakLogic_Function,
+#Ribbon_insert_SpeakLogic_1.domain-theory #Ribbon_insert_SpeakLogic_Word,
+#Ribbon_insert_SpeakLogic_1.domain-theory #Ribbon_insert_SpeakLogic_Application,
+#Ribbon_insert_SpeakLogic_1.domain-theory #Ribbon_insert_SpeakLogic_Relationship {
+    display: none;
+}
+
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Derivative,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Function2,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Fundamental1,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Fundamental2,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Instrusment,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Stability,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Theorem,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Theory1,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Theory2,
+#Ribbon_insert_SpeakLogic_1.domain-communication #Ribbon_insert_SpeakLogic_Time {
+    display: none;
+}
+
+#listSubMenuEuqationsIntergral {
+    padding: 20px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.e-split.e-widget:hover {
+    /*background: ;*/
+    background-color: #86cbea;
+}
+
+.e-split.e-widget:hover .e-split-btn {
+    border: unset;
+}
