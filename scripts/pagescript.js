@@ -1266,7 +1266,6 @@ function openDialog1(name) {
   return dialog;
 }
 
-
 function closeDialog() {
   document.querySelector(".activeCustomDialog").remove();
 }
@@ -1291,7 +1290,6 @@ function applyHiddenOrShow() {
     }
   }
 }
-
 
 function VerticalDialog() {
   let dialoggp = openDialog1('Entity Has Mutiple Entities');
@@ -1936,7 +1934,6 @@ function ChangeData1(x1, cs) {
   //diagramElement.isLoading = false;
 
 }
-
 
 function GroupOfPeopleDialog() {
   let dialoggp = openDialog1('Group Of People');

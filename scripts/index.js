@@ -571,7 +571,6 @@ function funAddWordToDictionary(id) {
   //diagram.dataBind();
 }
 
-
 function funAddEntityToCollection(id) {
   const type = getTypeAddPartToApplication(id);
   const annotation = ["Entity1", "Collection"];
@@ -3249,17 +3248,11 @@ function setCursor(cursor) {
 let vcheck = 0;
 
 function Check() {
-
-
   vcheck = 1;
-
 }
 
 function Check1() {
-
-
   vcheck = 2;
-
 }
 
 function startLeftDrag() {
@@ -3326,8 +3319,6 @@ function endDrag() {
 //}
 //vcheck=1;
 //}
-
-
 }
 
 function resetColumn() {
