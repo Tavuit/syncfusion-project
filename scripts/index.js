@@ -23,6 +23,7 @@ let stability = getTheoryStability();
 let thoerylabel = getTheoryLabel();
 let quickTheory = getQuickTheory();
 let operatorTheory = getOperatorTheory();
+let equation = getEquations();
 fetch("https://restcountries.com/v3.1/all")
   .then((a) => a.json())
   .then((r) => {
@@ -51,7 +52,8 @@ let allShapes = []
   .concat(instrument)
   .concat(functions)
   .concat(stability)
-  .concat(thoerylabel);
+  .concat(thoerylabel)
+  .concat(equation);
 
 allShapes = everyShape;
 
@@ -66,7 +68,12 @@ var commPalette = new ej.diagrams.SymbolPalette({
       symbols: quickComm,
       title: "Quick Entities",
     },
-    {id: "person", expanded: true, symbols: persons, title: "Person"},
+    {
+      id: "person",
+      expanded: false,
+      symbols: persons,
+      title: "Person"
+    },
     {
       id: "Communication",
       expanded: false,
@@ -85,7 +92,12 @@ var commPalette = new ej.diagrams.SymbolPalette({
       symbols: commLink,
       title: "Communication Link",
     },
-    {id: "Analysis", expanded: false, symbols: analysis, title: "Analysis"},
+    {
+      id: "Analysis",
+      expanded: false,
+      symbols: analysis,
+      title: "Analysis"
+    },
     {
       id: "CommunicationSignal",
       expanded: false,
@@ -110,6 +122,12 @@ var commPalette = new ej.diagrams.SymbolPalette({
       symbols: commlabel,
       title: "Label",
     },
+    {
+      id: "Equations",
+      expanded: false,
+      symbols: equation,
+      title: "Equations"
+    }
   ],
   symbolHeight: 75,
   symbolWidth: 275,
@@ -3293,6 +3311,7 @@ function endDrag() {
   isLeftDrag = false;
   isRightDrag = false;
   setCursor("auto");
+  // diagram.selectedItems.nodes[0].annotations[0].properties.content = ``
 //if (vcheck === 2){
 //if (diagram.selectedItems.nodes.length){
 

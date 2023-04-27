@@ -25,8 +25,7 @@ function drawShape0({id, title, annotation, toolTip, type, menuId}) {
       title, toolTip,
     },],
     shape: {
-      type: "Native",
-      content: `
+      type: "Native", content: `
       <g transform="translate(2, 2)">
         <circle vector-effect="non-scaling-stroke" cx="25" cy="25" r="25" fill="none" stroke="black" stroke-width="1"> </circle>                                       
       </g>
@@ -58,8 +57,7 @@ function drawShape1({id, title, annotation, toolTip, type, menuId}) {
       title, toolTip,
     },],
     shape: {
-      type: "Native",
-      content: `
+      type: "Native", content: `
       <g transform="translate(2, 2)">
         <circle vector-effect="non-scaling-stroke" cx="25" cy="25" r="25" fill="none" stroke="black" stroke-width="1"> </circle>
         <circle vector-effect="non-scaling-stroke" cx="25" cy="25" r="50" fill="none" stroke="black" stroke-width="1"> </circle>
@@ -94,8 +92,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },],
       shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g transform="translate(2,2)">
           <rect height="40" width="120" stroke-width="0" fill="transparent" />
           <ellipse vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" cx="60" cy="20" rx="60" ry="20"/>
@@ -130,8 +127,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },],
       shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g transform="translate(2, 2)">
           <rect width="10" height="5" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="${strokeWidth}" stroke-dasharray = "${strokeDashArray}" />
           <circle vector-effect="non-scaling-stroke" cx="3.5" cy="2.5" r="0.4"/>
@@ -154,8 +150,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },],
       shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g  transform="translate(2, 2)">
           <rect x="0" y="0" width="100" height="50" fill="none" stroke-width="0"/>
           <rect width="90" height="50" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
@@ -187,8 +182,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },],
       shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g transform="translate(2, 2)">
           <rect x="0" y="0" width="100" height="50" fill="none" stroke-width="0"/>
           <rect width="100" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
@@ -220,8 +214,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },],
       shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g  transform="translate(2, 2)">
           <rect x="0" y="0" height="50" width="100" fill="transparent" stroke-width="0"/>
           <rect width="90" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
@@ -250,9 +243,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
     node = {
       id,
       shape: {
-        type: "Native",
-        content:
-          `<g  transform="translate(2, 2)">
+        type: "Native", content: `<g  transform="translate(2, 2)">
           <rect height="30" width="100" fill="transparent" stroke-width="0"/>
           <foreignObject class="symbol-text-container" x="0" y="25" width="${100}" height="${30}" visibility="hidden">
           <div style="height: ${30}px" class="flex-container">
@@ -296,8 +287,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
       id, addInfo: [{
         title, toolTip,
       },], shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g transform="translate(2,2)">
           <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" x="0" y="0" height="77" width="47"/>
           <path vector-effect="non-scaling-stroke" d="M9.4, 19.25 A14.1 14.4375 0 0 1 37.6, 19.25A14.1 14.4375 0 0 1 9.4, 19.25 z" fill="transparent" stroke="#000000" stroke-width="1px" />
@@ -335,8 +325,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
       id, addInfo: [{
         title, toolTip,
       },], shape: {
-        type: "Native",
-        content: `
+        type: "Native", content: `
         <g transform="translate(2,2)">
           <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="transparent" stroke-width="1" x="0" y="0" height="87" width="47"/>
           <path vector-effect="non-scaling-stroke" d="M7.05, 21.75A15.98 16.4333333333333 0 0 1 39.95, 21.75A15.98 16.4333333333333 0 0 1 7.05, 21.75z" fill="transparent" stroke="#000000" stroke-width="1px" />
@@ -358,10 +347,7 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         title, toolTip,
       },], shape: {
         type: "Native",
-        content: '<g  transform="translate(2, 2)">' + '<rect vector-effect="non-scaling-stroke" height="40" width="120" stroke="black" fill="transparent" stroke-width="1"/>' + '<circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' + '<circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black" />' + '<circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black" />' + '<ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' + '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"/>' +
-          '<circle vector-effect="non-scaling-stroke" cx="41" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' + '<circle vector-effect="non-scaling-stroke" cx="39.0" cy="6" r="1" fill="black" />' + '<circle vector-effect="non-scaling-stroke" cx="43.0" cy="6" r="1.0" fill="black" />' + '<ellipse vector-effect="non-scaling-stroke" cx="41.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' + '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 41 13.5 L 41 19.5 L 34 29.5 M 41 19.5 L 48 29.5 M 33 18 L 49 18"/>' +
-          '<circle vector-effect="non-scaling-stroke" fill="black" cx="62" cy="17.5" r="1.5"/>' + '<circle vector-effect="non-scaling-stroke" fill="black" cx="72" cy="17.5" r="1.5"/>' + '<circle vector-effect="non-scaling-stroke" fill="black" cx="82" cy="17.5" r="1.5"/>' + '<foreignObject class="symbol-text-container" x="3" y="30" width="20" height="10" visibility="show">' + '<div class="flex-container">' + '<div class="symbol-text-element">' + '<div style="font-size:5px;font-weight:100"><i>Person1</i></div>' + '</div>' + '</div>' + '</foreignObject>' +
-          '<foreignObject class="symbol-text-container" x="33" y="30" width="20" height="10" visibility="show">' + '<div class="flex-container">' + '<div class="symbol-text-element">' + '<div style="font-size:5px;font-weight:100"><i>Person2</i></div>' + '</div>' + '</div>' + '</foreignObject>' + "</g>",
+        content: '<g  transform="translate(2, 2)">' + '<rect vector-effect="non-scaling-stroke" height="40" width="120" stroke="black" fill="transparent" stroke-width="1"/>' + '<circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' + '<circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black" />' + '<circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black" />' + '<ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' + '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"/>' + '<circle vector-effect="non-scaling-stroke" cx="41" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' + '<circle vector-effect="non-scaling-stroke" cx="39.0" cy="6" r="1" fill="black" />' + '<circle vector-effect="non-scaling-stroke" cx="43.0" cy="6" r="1.0" fill="black" />' + '<ellipse vector-effect="non-scaling-stroke" cx="41.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' + '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 41 13.5 L 41 19.5 L 34 29.5 M 41 19.5 L 48 29.5 M 33 18 L 49 18"/>' + '<circle vector-effect="non-scaling-stroke" fill="black" cx="62" cy="17.5" r="1.5"/>' + '<circle vector-effect="non-scaling-stroke" fill="black" cx="72" cy="17.5" r="1.5"/>' + '<circle vector-effect="non-scaling-stroke" fill="black" cx="82" cy="17.5" r="1.5"/>' + '<foreignObject class="symbol-text-container" x="3" y="30" width="20" height="10" visibility="show">' + '<div class="flex-container">' + '<div class="symbol-text-element">' + '<div style="font-size:5px;font-weight:100"><i>Person1</i></div>' + '</div>' + '</div>' + '</foreignObject>' + '<foreignObject class="symbol-text-container" x="33" y="30" width="20" height="10" visibility="show">' + '<div class="flex-container">' + '<div class="symbol-text-element">' + '<div style="font-size:5px;font-weight:100"><i>Person2</i></div>' + '</div>' + '</div>' + '</foreignObject>' + "</g>",
       }, annotations: [{
         content: annotation, verticalAlignment: "Bottom", offset: {x: 0.5, y: 1}, margin: {
           top: 20,
