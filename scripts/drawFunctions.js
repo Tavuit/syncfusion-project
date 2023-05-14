@@ -1703,6 +1703,55 @@ function drawShape({id, title, annotation, toolTip, type, menuId}) {
         shape: annotation.target || "Arrow", style: annotation.targetStyle || null,
       }, style: annotation.style || null, sourcePoint, targetPoint,
     };
+  } else if (type === "EquationWithBorder") {
+    let height = annotation?.height !== undefined ? annotation.height : 80;
+    let width = annotation?.width !== undefined ? annotation.width : 150;
+    let text = annotation?.content !== undefined ? annotation?.content[0]?.content : annotation;
+    let textLen;
+    if (String(text).length === 1) {
+      textLen = width * 0.15;
+    } else if (String(text).length > 1 && String(text).length < 5) {
+      textLen = width * 0.3;
+    } else if (String(text).length <= 20 && String(text).length >= 5) {
+      textLen = width * 0.65;
+    } else {
+      textLen = width * 0.85;
+    }
+    node = {
+      id,
+      addInfo: [{
+        title, toolTip,
+      },],
+      shape: {
+        type: "Native", content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="transparent" />
+                    </g>`,
+      },
+      annotations: [{template: annotation}],
+      width: width,
+      height: height,
+      ports: rectPorts,
+      constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
+      style: {fill: "white", fontSize: 10},
+    };
+  } else if (type === "EquationWithNoBorder") {
+    node = {
+      id,
+      shape: {
+        type: "Native", content: `<g  transform="translate(2, 2)">
+          <rect height="30" width="100" fill="transparent" stroke-width="0"/>
+          <foreignObject class="symbol-text-container" x="0" y="25" width="${100}" height="${30}" visibility="hidden">
+          </foreignObject>     
+        </g>`,
+      },
+      addInfo: [{
+        title, toolTip,
+      },],
+      annotations: [{template: annotation}],
+      constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
+      height: 30,
+      width: 100,
+    };
   } else {
     let height = annotation?.height !== undefined ? annotation.height : 80;
     let width = annotation?.width !== undefined ? annotation.width : 150;

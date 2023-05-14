@@ -58,7 +58,6 @@ let allShapes = []
 allShapes = everyShape;
 
 var text = JSON.stringify(allShapes);
-
 var commPalette = new ej.diagrams.SymbolPalette({
   expandMode: "Single",
   palettes: [
@@ -399,8 +398,6 @@ $("#fileUploadToDiagrams").change(function () {
 let grouped = 0;
 
 function relatePersonOperatingPrinciple(id) {
-  console.log(id);
-
   let idFind = "";
   let ellipseBasic = "ellipseBasic";
   if (id.includes("withoperatingprinciple")) {
@@ -2386,7 +2383,8 @@ var diagram = new ej.diagrams.Diagram({
   },
   setNodeTemplate: (obj, diagram) => {
   },
-
+  selectionChange: selectionChange,
+  textEdit: textEdit,
   contextMenuClick: function (args) {
 
     currentItem = args.item.id;
@@ -2851,6 +2849,15 @@ var diagram = new ej.diagrams.Diagram({
   },
 });
 
+
+function selectionChange(args) {
+
+}
+
+function textEdit(args) {
+  console.log(args, 'args')
+}
+
 function onCheckOpenModalLabelText() {
   for (const i of Object.keys(listItem)) {
     if (idElementActive.startsWith(i)) return true;
@@ -3284,34 +3291,36 @@ function startRightDrag() {
 }
 
 function onDrag(e) {
-  if (isRightDrag || isLeftDrag) {
-    setCursor("ew-resize");
-    let container = document.getElementById("container");
-    let leftSection = document.getElementById("left-section");
-    let rightSection = document.getElementById("right-section");
-
-    let leftWidth = isLeftDrag ? e.clientX : leftSection.offsetWidth;
-    let rightWidth = isRightDrag
-      ? container.clientWidth - e.clientX
-      : rightSection.offsetWidth;
-    let cols = [
-      leftWidth,
-      5,
-      container.clientWidth - 10 - leftWidth - rightWidth - 4,
-      5,
-      rightWidth,
-    ];
-    let colDef = cols.map((c) => c + "px").join(" ");
-    container.style.gridTemplateColumns = colDef;
-    e.preventDefault();
-  }
+  // if (isRightDrag || isLeftDrag) {
+  //   setCursor("ew-resize");
+  //   let container = document.getElementById("container");
+  //   let leftSection = document.getElementById("left-section");
+  //   let rightSection = document.getElementById("right-section");
+  //
+  //   let leftWidth = isLeftDrag ? e.clientX : leftSection.offsetWidth;
+  //   let rightWidth = isRightDrag
+  //     ? container.clientWidth - e.clientX
+  //     : rightSection.offsetWidth;
+  //   let cols = [
+  //     leftWidth,
+  //     5,
+  //     container.clientWidth - 10 - leftWidth - rightWidth - 4,
+  //     5,
+  //     rightWidth,
+  //   ];
+  //   let colDef = cols.map((c) => c + "px").join(" ");
+  //   container.style.gridTemplateColumns = colDef;
+  //   e.preventDefault();
+  // }
 }
 
 function endDrag() {
   isLeftDrag = false;
   isRightDrag = false;
   setCursor("auto");
-  // diagram.selectedItems.nodes[0].annotations[0].properties.content = ``
+  // const mfe = new MathfieldElement();
+  // mfe.value = '\\frac{\\pi}{2}';
+  // diagram.selectedItems.nodes[0].annotations[0].properties.content = mfe
 //if (vcheck === 2){
 //if (diagram.selectedItems.nodes.length){
 
@@ -3340,10 +3349,7 @@ function endDrag() {
 //}
 }
 
-function resetColumn() {
-  let container = document.getElementById("container");
-  container.style.gridTemplateColumns = "1fr 5px 4fr 5px 1fr";
-}
+
 
 const loadDiagram = (data) => {
   const prevTool = diagram.tool;
@@ -3673,12 +3679,3 @@ $("#export-pdf-btn").on("click", () => {
     },
   });
 });
-
-
-
-
-
-
-
-
-

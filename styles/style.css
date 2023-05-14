@@ -9,6 +9,7 @@
 tspan {
     font-family: serif;
 }
+
 *::-webkit-scrollbar {
     width: 9px;
     height: 9px;
@@ -42,6 +43,7 @@ body,
 ul {
     all: revert;
 }
+
 #Ribbon {
     height: 158px;
     font-size: 5px;
@@ -96,6 +98,7 @@ ul {
     background-color: white;
     cursor: ew-resize;
 }
+
 .e-btn {
     text-transform: none;
 }
@@ -211,6 +214,7 @@ ul {
 .button-cross:hover {
     color: crimson;
 }
+
 .active-model-page {
     font-size: 13px;
     font-weight: bolder;
@@ -221,6 +225,7 @@ ul {
     padding: 0;
     height: fit-content;
 }
+
 .context-list {
     padding-left: 20px;
     padding-top: 2px;
@@ -235,6 +240,7 @@ ul {
     display: flex;
     align-items: center;
 }
+
 .context-list:hover {
     background-color: #dddddd;
 }
@@ -266,6 +272,7 @@ ul {
 .dialog-title > span {
     line-height: 25px;
 }
+
 .other-label {
     display: block;
     margin-left: 15px;
@@ -294,6 +301,7 @@ ul {
     user-select: none;
     line-height: 25px;
 }
+
 .cross-button:hover {
     cursor: pointer;
     background-color: red;
@@ -321,6 +329,7 @@ ul {
     font-size: 12px;
     border: 1px solid #dbdbdb;
 }
+
 .e-btn,
 .e-css.e-btn {
     padding: 6px 12px;
@@ -394,6 +403,7 @@ ul {
 .btn-primary:hover {
     background-color: #0ab500;
 }
+
 .e-ribbon .e-header > .e-apptab .e-menu {
     background: #0ab352;
 }
@@ -402,6 +412,7 @@ ul {
 .e-ribbon.e-js .e-header .e-active.e-contextualtabset a {
     color: #0ab352;
 }
+
 .e-ribbon.e-js .e-header .e-active.e-tab a {
     height: 100%;
 }
@@ -445,6 +456,7 @@ ul {
     opacity: 1;
     transition: opacity 0.5s linear;
 }
+
 .hidden {
     visibility: hidden !important;
     opacity: 0;
@@ -458,69 +470,89 @@ ul {
 .w-112px {
     width: 112px;
 }
+
 .w-200px {
     width: 200px;
 }
+
 .w-100 {
     width: 100%;
 }
+
 .flex-1 {
     flex: 1;
 }
+
 .d-flex {
     display: flex;
     align-items: center !important;
 }
+
 .group-button-dialog-group-of-people {
     justify-content: flex-end;
     padding-top: 10px;
 }
+
 .group-button-dialog-group-of-people button {
     border: 1px solid;
     border-radius: 4px;
     padding: 0 8px;
 }
+
 .m-r-4 {
     margin-right: 4px;
 }
+
 .m-r-8 {
     margin-right: 8px;
 }
+
 .m-l-8 {
     margin-left: 8px;
 }
+
 .m-b-8 {
     margin-bottom: 8px;
 }
+
 .m-b-20 {
     margin-bottom: 20px;
 }
+
 .p-r-20 {
     padding-right: 20px;
 }
+
 .p-l-20 {
     padding-left: 20px;
 }
+
 .line-height-20 {
     line-height: 20px;
 }
+
 .e-dialog .e-dlg-header {
     font-size: 14px;
 }
+
 .e-dialog .e-dlg-header-content,
 .e-dialog .e-dlg-content {
     padding: 8px;
 }
+
 .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
     border-radius: 0;
     left: 4px;
 }
+
 .e-dialog .e-footer-content {
     padding-top: 0;
 }
+
 .justify-content-space-between {
     justify-content: space-between;
 }
+
 #dialogGroupofPeople,
 #dialogNodeTableComm,
 #dialogContinuityPerson,
@@ -529,38 +561,47 @@ ul {
     padding: 8px;
     background: #0d6efd59;
 }
+
 .copy-clipboard {
     background-image: url("/icons/image/clipboardcopy.png");
     background-size: cover;
 }
+
 .cut-clipboard {
     background-image: url("/icons/image/menu/home/ClipboardCut.png");
     background-size: cover;
 }
+
 .delete-clipboard {
     background-image: url("/icons/image/menu/home/clipboardelete.png");
     background-size: cover;
 }
+
 .icon-paste {
     background-image: url("/icons/image/icon-paste.jpg");
     background-size: cover;
 }
+
 .copy-to-clipboard {
     background-image: url("/icons/image/copy-to-clipboard.svg");
     background-size: cover;
 }
+
 .icon-undo {
     background-image: url("/icons/image/menu/home/undo.png");
     background-size: cover;
 }
+
 .menu-burger {
     background-image: url("/icons/image/menu-burger.png");
     background-size: cover;
 }
+
 .strikethrough {
     background-image: url("/icons/image/strikethrough.svg");
     background-size: cover;
 }
+
 /*.fill-menu {*/
 /*    background-image: url("/icons/image/menu/home/fill-menu.png");*/
 /*    background-size: cover;*/
@@ -569,38 +610,47 @@ ul {
     background-image: url("/icons/image/menu/home/linemenu.svg");
     background-size: cover;
 }
+
 .text-menu {
     background-image: url("/icons/image/menu/home/text-menu.svg");
     background-size: cover;
 }
+
 .start-menu {
     background-image: url("/icons/image/menu/home/start-menu.svg");
     background-size: cover;
 }
+
 .end-menu {
     background-image: url("/icons/image/menu/home/end-menu.svg");
     background-size: cover;
 }
+
 .point-menu {
     background-image: url("/icons/image/menu/home/point-menu.svg");
     background-size: cover;
 }
+
 .text-menu2 {
     background-image: url("/icons/image/menu/home/text-menu2.svg");
     background-size: cover;
 }
+
 .line-menu2 {
     background-image: url("/icons/image/menu/home/line-menu.svg");
     background-size: cover;
 }
+
 .line-menu2 {
     background-image: url("/icons/image/menu/home/line-menu.svg");
     background-size: cover;
 }
+
 .autoconnector {
     background-image: url("/icons/image/autoconnector.svg");
     background-size: cover;
 }
+
 .node-menu {
     background-image: url("/icons/image/node-menu.svg");
     background-size: cover;
@@ -610,6 +660,7 @@ ul {
     background-image: url("/icons/image/container-menu-insert.png");
     background-size: cover;
 }
+
 /*.equation-menu-brackets {*/
 /*    background-image: url("/icons/image/menu/equations/brackets.png");*/
 /*    background-size: cover;*/
@@ -705,154 +756,192 @@ ul {
     background-image: url("/icons/image/list-menu-insert.png");
     background-size: cover;
 }
+
 .picture-menu-insert {
     background-image: url("/icons/image/picture-menu-insert.png");
     background-size: cover;
 }
+
 .selectedentityedit {
     background-image: url("/icons/image/menu/edit/selectedentityedit.png");
     background-size: cover;
 }
+
 .undolastactionedit {
     background-image: url("/icons/image/menu/edit/undolastactionedit.png");
     background-size: cover;
 }
+
 .startproject {
     background-image: url("/icons/image/menu/project/startproject.png");
     background-size: cover;
 }
+
 .error {
     background-image: url("/icons/image/error.png");
     background-size: cover;
 }
+
 .optionmix {
     background-image: url("/icons/image/optionmix.png");
     background-size: cover;
 }
+
 .captureimageproject {
     background-image: url("/icons/image/captureimageproject.png");
     background-size: cover;
 }
+
 .editimageproject {
     background-image: url("/icons/image/editimageproject.png");
     background-size: cover;
 }
+
 .reconrdvideoproject {
     background-image: url("/icons/image/reconrdvideoproject.png");
     background-size: cover;
 }
+
 .editvideoproject {
     background-image: url("/icons/image/editvideoproject.png");
     background-size: cover;
 }
+
 .recordaudioproject {
     background-image: url("/icons/image/recordaudioproject.png");
     background-size: cover;
 }
+
 .settingproject {
     background-image: url("/icons/image/settingproject.png");
     background-size: cover;
 }
+
 .simulationproject {
     background-image: url("/icons/image/simulationproject.png");
     background-size: cover;
 }
+
 .closeproject {
     background-image: url("/icons/image/closeproject.png");
     background-size: cover;
 }
+
 .openproject {
     background-image: url("/icons/image/openproject.png");
     background-size: cover;
 }
+
 .fittowindownview {
     background-image: url("/icons/image/fittowindownview.png");
     background-size: cover;
 }
+
 .pagewidthview {
     background-image: url("/icons/image/pagewidthview.png");
     background-size: cover;
 }
+
 .subapplication {
     background-image: url("/icons/image/subapplication.png");
     background-size: cover;
 }
+
 .subfunction {
     background-image: url("/icons/image/subfunction.png");
     background-size: cover;
 }
+
 .subresult {
     background-image: url("/icons/image/subresult.png");
     background-size: cover;
 }
+
 .entityview {
     background-image: url("/icons/image/entityview.png");
     background-size: cover;
 }
+
 .panzoomview {
     background-image: url("/icons/image/panzoomview.png");
     background-size: cover;
 }
+
 .modelview {
     background-image: url("/icons/image/modelview.png");
     background-size: cover;
 }
+
 .tasklistview {
     background-image: url("/icons/image/tasklistview.png");
     background-size: cover;
 }
+
 .showhidemodelsview {
     background-image: url("/icons/image/showhidemodelsview.png");
     background-size: cover;
 }
+
 .communicationdomain {
     background-image: url("/icons/image/communicationdomain.png");
     background-size: cover;
 }
+
 .theorydomain {
     background-image: url("/icons/image/theorydomain.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Application_Icon {
     background-image: url("/icons/image/menu/speaklogic/Application_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Derivative_Icon {
     background-image: url("/icons/image/menu/speaklogic/Derivative_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Function_Icon {
     background-image: url("/icons/image/menu/speaklogic/Function_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Function2_Icon {
     background-image: url("/icons/image/menu/speaklogic/Function2_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Fundamental1_Icon {
     background-image: url("/icons/image/menu/speaklogic/Fundamental1_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Fundamental2_Icon {
     background-image: url("/icons/image/menu/speaklogic/Fundamental2_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Instrusment_Icon {
     background-image: url("/icons/image/menu/speaklogic/Instrusment_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Relationship_Icon {
     background-image: url("/icons/image/menu/speaklogic/Relationship_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Stability_Icon {
     background-image: url("/icons/image/menu/speaklogic/Stability_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Theorem_Icon {
     background-image: url("/icons/image/menu/speaklogic/Theorem_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Theory1_Icon {
     background-image: url("/icons/image/menu/speaklogic/Theory1_Icon.png");
     background-size: cover;
@@ -862,22 +951,27 @@ ul {
     background-image: url("/icons/image/menu/speaklogic/Theory2_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Time_Icon {
     background-image: url("/icons/image/menu/speaklogic/Time_Icon.png");
     background-size: cover;
 }
+
 .speak-logic-menu-Word_Icon {
     background-image: url("/icons/image/menu/speaklogic/Word_Icon.png");
     background-size: cover;
 }
+
 .icon-40 {
     width: 40px;
     height: 40px;
 }
+
 .icon-20 {
     width: 20px;
     height: 20px;
 }
+
 .e-btn .e-icon {
     padding: 0;
 }
@@ -885,24 +979,59 @@ ul {
 .m-l-12 {
     margin-left: 12px;
 }
+
 .fs-20 {
     font-size: 20px;
 }
+
 .width-max-content {
     width: max-content !important;
 }
+
 .disabled-custom {
     opacity: 0.3;
     pointer-events: none;
 }
+
 .hr_nay {
     border-top: 1px solid #000;
     height: 90px;
     /* margin-left: -117px; */
     -moz-transform: rotate(-61deg);
     -o-transform: rotate(-61deg);
-    -webkit-transform:rotate(-61deg);
+    -webkit-transform: rotate(-61deg);
     -ms-transform: rotate(-61deg);
     width: 80px;
     transform: rotate(-61deg);
+}
+
+.mathquill-latex-input {
+    visibility: hidden !important;
+    padding: 0 !important;
+    border: 0 !important;
+    width: 0 !important;
+}
+
+.mathquill-mathquill-input {
+    border: unset !important;
+    font-size: 13px;
+    min-height: 26px;
+    margin: 0;
+    padding: 3px 5px;
+    width: 100%;
+}
+
+.input-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 20px;*/
+}
+
+@media not (pointer: coarse) {
+    math-field::part(virtual-keyboard-toggle) {
+        display: none;
+    }
 }

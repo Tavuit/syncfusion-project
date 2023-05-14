@@ -1,22 +1,64 @@
-
 var equationData = [
   {
     id: "equationWithBorder",
     title: "Equation with border",
-    annotation: "equationWithBorder",
+    annotation: `
+      <div class="input-wrapper">
+          <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
+      </div>`,
     menuId: "equation",
     toolTip: "Equation with border",
+    type: "EquationWithBorder",
   },
   {
     id: "equationWithNoBorder",
     title: "Equation with no border",
-    annotation: "equationWithNoBorder",
+    annotation: `
+      <div class="input-wrapper">
+          <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
+      </div>`,
     menuId: "equation",
     toolTip: "Equation with border",
-    type: "Text",
+    type: "EquationWithNoBorder",
   }
 ]
 
 function getEquations() {
   return equationData.map((shape) => drawShape(shape))
+}
+
+
+function isSelected() {
+  if (diagram.selectedItems.nodes.length > 0) {
+    return true
+  }
+  console.log("No nodes are currently selected");
+  return false
+}
+
+function isEquationBox() {
+  if (!isSelected()) return null
+  var SALT = "_html_element"
+  var selectedItemDivID = diagram.selectedItems.wrapper.children[0].id;
+  var $wrapper = document.getElementById(`${selectedItemDivID + SALT}`)
+  let mqInput = $wrapper.querySelectorAll("#mathquill-mathquill-input-border")[0]
+  if (!mqInput) {
+    console.log("Selected node must be equation box")
+    return null
+  }
+  return mqInput
+}
+
+
+function getEquationBox() {
+  let equationBox = isEquationBox()
+  if (!equationBox) return null
+  return equationBox
+}
+
+
+function handleEquation(operator) {
+  if (!getEquationBox()) return
+  let mqInput = getEquationBox()
+  mqInput.executeCommand(['insert', operator]);
 }
