@@ -32,7 +32,7 @@ function isSelected() {
   if (diagram.selectedItems.nodes.length > 0) {
     return true
   }
-  console.log("No nodes are currently selected");
+  alert("No node is currently selected");
   return false
 }
 
@@ -43,7 +43,7 @@ function isEquationBox() {
   var $wrapper = document.getElementById(`${selectedItemDivID + SALT}`)
   let mqInput = $wrapper.querySelectorAll("#mathquill-mathquill-input-border")[0]
   if (!mqInput) {
-    console.log("Selected node must be equation box")
+    alert("Selected node must be equation box")
     return null
   }
   return mqInput
