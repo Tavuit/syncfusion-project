@@ -887,11 +887,15 @@ var tabs = [
                 id: "Labeled Arrow",
                 text: "Labeled Arrow",
                 toolTip: "Labeled Arrow",
-                height: "auto",
-                buttonSettings: {
+                type: ej.Ribbon.type.splitButton,
+                height: "70px",
+                splitButtonSettings: {
+                  buttonMode: ej.ButtonMode.Dropdown,
+                  arrowPosition: ej.ArrowPosition.Bottom,
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 equation-menu-arrowEquation",
+                  targetID: "listSubMenuEuqationsLabeledArrow",
                 },
               },
               {
@@ -913,13 +917,15 @@ var tabs = [
                 id: "Accent & Prime",
                 text: "Accent & Prime",
                 toolTip: "Accent & Prime",
-                height: "auto",
-                buttonSettings: {
+                type: ej.Ribbon.type.splitButton,
+                height: "70px",
+                splitButtonSettings: {
                   buttonMode: ej.ButtonMode.Dropdown,
                   arrowPosition: ej.ArrowPosition.Bottom,
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 equation-menu-decoratedCharacter",
+                  targetID: "listSubMenuEuqationsAccentPrime",
                 },
               },
               {

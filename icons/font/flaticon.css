@@ -14,399 +14,399 @@
 }
 
 .flaticon-paste:before {
-    content: url('image/icon-paste1.jpg');
+    content: url('../image/icon-paste1.jpg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-copy:before {
-    content: url('image/clipboardcopy.png');
+    content: url('../image/clipboardcopy.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-scissors:before {
-    content: url('image/menu/home/ClipboardCut.png');
+    content: url('../image/menu/home/ClipboardCut.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-delete:before {
-    content: url('image/menu/home/clipboardelete.png');
+    content: url('../image/menu/home/clipboardelete.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-share:before {
-    content: url('image/copy-to-clipboard.svg');
+    content: url('../image/copy-to-clipboard.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-redo-arrow1:before {
-    content: url('image/menu/home/undo1.png');
+    content: url('../image/menu/home/undo1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .flaticon-redo-arrow-large:before {
-    content: url('image/menu/edit/undolastactionedit.png');
+    content: url('../image/menu/edit/undolastactionedit.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .fill-menu:before {
-    content: url('image/menu/home/fill-menu.png');
+    content: url('../image/menu/home/fill-menu.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .line-menu:before {
-    content: url('image/menu/home/linemenu.svg');
+    content: url('../image/menu/home/linemenu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .text-menu:before {
-    content: url('image/menu/home/text-menu.svg');
+    content: url('../image/menu/home/text-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .start-menu:before {
-    content: url('image/menu/home/start-menu.svg');
+    content: url('../image/menu/home/start-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .end-menu:before {
-    content: url('image/menu/home/end-menu.svg');
+    content: url('../image/menu/home/end-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .point-menu:before {
-    content: url('image/menu/home/point-menu.svg');
+    content: url('../image/menu/home/point-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .text-menu2:before {
-    content: url('image/menu/home/text-menu2.svg');
+    content: url('../image/menu/home/text-menu2.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .line-menu2:before {
-    content: url('image/menu/home/line-menu.svg');
+    content: url('../image/menu/home/line-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .autoconnector:before {
-    content: url('image/autoconnector.svg');
+    content: url('../image/autoconnector.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .node-menu-home-list:before {
-    content: url('image/node-menu.svg');
+    content: url('../image/node-menu.svg');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .container-menu-insert:before {
-    content: url('image/container-menu-insert.png');
+    content: url('../image/container-menu-insert.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .list-menu-insert:before {
-    content: url('image/list-menu-insert.png');
+    content: url('../image/list-menu-insert.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .picture-menu-insert:before {
-    content: url('image/picture-menu-insert.png');
+    content: url('../image/picture-menu-insert.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .copy-clipboard:before {
-    content: url('image/copy-to-clipboard.svg');
+    content: url('../image/copy-to-clipboard.svg');
     position: relative;
     left: -10px;
     top: -30px;
 }
 
 .function:before {
-    content: url('image/copy-to-clipboard.svg');
+    content: url('../image/copy-to-clipboard.svg');
     position: relative;
     left: -10px;
     top: -30px;
 }
 
 .application:before {
-    content: url('image/copy-to-clipboard.svg');
+    content: url('../image/copy-to-clipboard.svg');
     position: relative;
     left: -10px;
     top: -30px;
 }
 
 .speak-logic-menu-Function_Icon:before {
-    content: url('image/menu/speaklogic/Function_Icon1.png');
+    content: url('../image/menu/speaklogic/Function_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Word_Icon:before {
-    content: url('image/menu/speaklogic/Word_Icon1.png');
+    content: url('../image/menu/speaklogic/Word_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Application_Icon:before {
-    content: url('image/menu/speaklogic/Application_Icon1.png');
+    content: url('../image/menu/speaklogic/Application_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Relationship_Icon:before {
-    content: url('image/menu/speaklogic/Relationship_Icon1.png');
+    content: url('../image/menu/speaklogic/Relationship_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Derivative_Icon:before {
-    content: url('image/menu/speaklogic/Derivative_Icon1.png');
+    content: url('../image/menu/speaklogic/Derivative_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Function2_Icon:before {
-    content: url('image/menu/speaklogic/Function2_Icon1.png');
+    content: url('../image/menu/speaklogic/Function2_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Fundamental1_Icon:before {
-    content: url('image/menu/speaklogic/Fundamental1_Icon1.png');
+    content: url('../image/menu/speaklogic/Fundamental1_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Fundamental2_Icon:before {
-    content: url('image/menu/speaklogic/Fundamental2_Icon1.png');
+    content: url('../image/menu/speaklogic/Fundamental2_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Instrusment_Icon:before {
-    content: url('image/menu/speaklogic/Instrusment_Icon1.png');
+    content: url('../image/menu/speaklogic/Instrusment_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Stability_Icon:before {
-    content: url('image/menu/speaklogic/Stability_Icon1.png');
+    content: url('../image/menu/speaklogic/Stability_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Theorem_Icon:before {
-    content: url('image/menu/speaklogic/Theorem_Icon1.png');
+    content: url('../image/menu/speaklogic/Theorem_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Theory1_Icon:before {
-    content: url('image/menu/speaklogic/Theory1_Icon1.png');
+    content: url('../image/menu/speaklogic/Theory1_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Theory2_Icon:before {
-    content: url('image/menu/speaklogic/Theory2_Icon1.png');
+    content: url('../image/menu/speaklogic/Theory2_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .speak-logic-menu-Time_Icon:before {
-    content: url('image/menu/speaklogic/Time_Icon1.png');
+    content: url('../image/menu/speaklogic/Time_Icon1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .selectedentityedit:before {
-    content: url('image/menu/edit/selectedentityedit.png');
+    content: url('../image/menu/edit/selectedentityedit.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .startproject:before {
-    content: url('image/menu/project/startproject1.png');
+    content: url('../image/menu/project/startproject1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .error:before {
-    content: url('image/error.png');
+    content: url('../image/error.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .optionmix:before {
-    content: url('image/optionmix1.png');
+    content: url('../image/optionmix1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .captureimageproject:before {
-    content: url('image/captureimageproject.png');
+    content: url('../image/captureimageproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .editimageproject:before {
-    content: url('image/editimageproject.png');
+    content: url('../image/editimageproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .reconrdvideoproject:before {
-    content: url('image/reconrdvideoproject1.png');
+    content: url('../image/reconrdvideoproject1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .editvideoproject:before {
-    content: url('image/editvideoproject.png');
+    content: url('../image/editvideoproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .recordaudioproject:before {
-    content: url('image/recordaudioproject1.png');
+    content: url('../image/recordaudioproject1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .settingproject:before {
-    content: url('image/settingproject1.png');
+    content: url('../image/settingproject1.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .simulationproject:before {
-    content: url('image/simulationproject.png');
+    content: url('../image/simulationproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .settingproject1:before {
-    content: url('image/settingproject.png');
+    content: url('../image/settingproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .closeproject:before {
-    content: url('image/closeproject.png');
+    content: url('../image/closeproject.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .subfunction:before {
-    content: url('image/subfunction.png');
+    content: url('../image/subfunction.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .subapplication:before {
-    content: url('image/subapplication.png');
+    content: url('../image/subapplication.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .subresult:before {
-    content: url('image/subresult.png');
+    content: url('../image/subresult.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .entityview:before {
-    content: url('image/entityview.png');
+    content: url('../image/entityview.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .panzoomview:before {
-    content: url('image/panzoomview.png');
+    content: url('../image/panzoomview.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .modelview:before {
-    content: url('image/modelview.png');
+    content: url('../image/modelview.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .tasklistview:before {
-    content: url('image/tasklistview.png');
+    content: url('../image/tasklistview.png');
     position: relative;
     left: 0px;
     top: 0px;
@@ -414,126 +414,126 @@
 
 
 .showhidemodelsview:before {
-    content: url('image/showhidemodelsview.png');
+    content: url('../image/showhidemodelsview.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-brackets:before {
-    content: url('image/menu/equations/brackets.png');
+    content: url('../image/menu/equations/brackets.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-decoratedEquation:before {
-    content: url('image/menu/equations/decoratedEquation.png');
+    content: url('../image/menu/equations/decoratedEquation.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-sumproduct:before {
-    content: url('image/menu/equations/sumproduct.png');
+    content: url('../image/menu/equations/sumproduct.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-integrals:before {
-    content: url('image/menu/equations/integrals.png');
+    content: url('../image/menu/equations/integrals.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-script:before {
-    content: url('image/menu/equations/script.png');
+    content: url('../image/menu/equations/script.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-divroot:before {
-    content: url('image/menu/equations/divroot.png');
+    content: url('../image/menu/equations/divroot.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-arrowEquation:before {
-    content: url('image/menu/equations/arrowEquation.png');
+    content: url('../image/menu/equations/arrowEquation.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-underbar:before {
-    content: url('image/menu/equations/underbar.png');
+    content: url('../image/menu/equations/underbar.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-decoratedCharacter:before {
-    content: url('image/menu/equations/decoratedCharacter.png');
+    content: url('../image/menu/equations/decoratedCharacter.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-matrix:before {
-    content: url('image/menu/equations/matrix.png');
+    content: url('../image/menu/equations/matrix.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-boxes:before {
-    content: url('image/menu/equations/boxes.png');
+    content: url('../image/menu/equations/boxes.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-symbols:before {
-    content: url('image/menu/equations/symbols.png');
+    content: url('../image/menu/equations/symbols.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-greekcapital:before {
-    content: url('image/menu/equations/greekcapital.png');
+    content: url('../image/menu/equations/greekcapital.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-greeksmall:before {
-    content: url('image/menu/equations/greeksmall.png');
+    content: url('../image/menu/equations/greeksmall.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .equation-menu-arrows:before {
-    content: url('image/menu/equations/arrows.png');
+    content: url('../image/menu/equations/arrows.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .communicationdomain:before {
-    content: url('image/communicationdomain.png');
+    content: url('../image/communicationdomain.png');
     position: relative;
     left: 0px;
     top: 0px;
 }
 
 .theorydomain:before {
-    content: url('image/theorydomain.png');
+    content: url('../image/theorydomain.png');
     position: relative;
     left: 0px;
     top: 0px;
