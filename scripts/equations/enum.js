@@ -34,6 +34,7 @@ var EQUATIONS_DATA = {
   "SquareParenthesesBracket": "[(x])",
   "SquareParenthesis": "[x)",
   "TopCurlyBracket": "\\overbrace{x}^{y}",
+  // "TopSquareBracket": "", \overbracket{abc}
   "TopSquareBracket": "",
   "ArrowDoubleBottom": "\\overleftrightarrow{x}",
   "ArrowDoubleBottomTop": "\\xleftrightarrow[y]{x}",
@@ -229,16 +230,59 @@ var EQUATIONS_DATA = {
   "CharacterTopTilde": "",
   "CharacterTriplePrime": "",
   "CharacterVDoubleStrikeThrough": "",
-  "CharacterVStrikeThrough": ""
+  "CharacterVStrikeThrough": "",
+  "Application_1": "A",
+  "Application_2": "A_{x}",
+  "Application_3": "\\hat{A}",
+  "Application_4": "\\bar{A}",
+  "Application_5": "\\hat{A}_{x}",
+  "Application_6": "\\bar{A}_{x}",
+  "function_1": "x",
+  "function_2": "f({}})",
+  "function_3": "\\bar{x}",
+  "function_4": "f(\\bar{x})",
+  "function_5": "f_{x}(\\bar{y})",
+  "function_6": "P_{x}",
+  "function_7": "G_{x}",
+  "function_8": "G_{x}(x)",
+  "function_9": "f(x)",
+  "function_10": "ECF(x)",
+  "function_11": "ECF({})",
+  "function_12": "f_{x}(\\bar{y}_{z})",
+  "function_13": "x_{z}",
+  "function_14": "f_{x}(y)",
+  "Relationship_1": "\\sim",
+  "Relationship_2": "\\alpha",
+  "Relationship_3": "\\Rightarrow",
+  "Relationship_4": "\\Leftarrow",
+  "Relationship_5": "\\Leftrightarrow",
+  "Relationship_6": "\\geq",
+  "Relationship_7": "\\gt",
+  "Relationship_8": "\\lt",
+  "Relationship_9": "=",
+  "Relationship_10": "\\leq",
+  "word_1": "W",
+  "word_2": "W_{x}",
+  "word_3": "\\hat{W}",
+  "word_4": "\\hat{W}_{x}",
+  "word_5": "\\bar{W}",
+  "word_6": "S(w)",
+  "word_7": "S_{x}(w)",
+  "word_8": "G(w)",
+  "word_9": "D(w)",
+  "word_10": "D(\\hat{w})",
+  "word_11": "G_{x}(w)",
+  "word_12": "S(\\bar{w})",
+  "word_13": "G(\\bar{w})"
 }
 
-var OPERATOR = ["\u00d7", "\u002D","\u2013", "\u2012", "\u2014", "\u00b7", "\u00f7", "\u00b1",
+var OPERATOR = ["\u00d7", "\u002D", "\u2013", "\u2012", "\u2014", "\u00b7", "\u00f7", "\u00b1",
   "\u00bd", "\u00bc", "\u00be", "\u2200", "\u2202", "\u2203", "\u2204",
   "\u2205", "\u2208", "\u2209", "\u220B", "\u220C", "\u220F", "\u2210",
   "\u2211", "\u2217", "\u221A", "\u221D", "\u221E", "\u2227", "\u2228",
   "\u2229", "\u222A", "\u2234", "\u2235", "\u2237", "\u2238", "\u2264",
   "\u2265", "\u226e", "\u226f", "\u25B3", "\u25B7", "\u25BD", "\u25c8",
-  "\u25C9", "\u25CE", "\u25E0", "\u25E1", "\u25EC" ,"\u211d", "\u2124",
+  "\u25C9", "\u25CE", "\u25E0", "\u25E1", "\u25EC", "\u211d", "\u2124",
   "\u2102", "\ud835\udd46", "\u2115"]
 
 var GREEKCAPTITAL = ["\u0391", "\u0392", "\u0393", "\u0394", "\u0395", "\u0396", "\u0397",
@@ -272,35 +316,35 @@ OPERATOR.forEach(item => {
   let el = document.createElement('div')
   el.className = "d-flex align-items-start"
   el.textContent = item
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", () => {
     handleEquation(item)
   })
   OPERATOR_WRAPPER.appendChild(el)
 })
 
-GREEKCAPTITAL.forEach(item=>{
+GREEKCAPTITAL.forEach(item => {
   let el = document.createElement('div')
   el.className = "d-flex align-items-start"
   el.textContent = item
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", () => {
     handleEquation(item)
   })
   GREEKCAPTITAL_WRAPPER.appendChild(el)
 })
-GREEKSMALL.forEach(item=>{
+GREEKSMALL.forEach(item => {
   let el = document.createElement('div')
   el.className = "d-flex align-items-start"
   el.textContent = item
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", () => {
     handleEquation(item)
   })
   GREEKSMALL_WRAPPER.appendChild(el)
 })
-ARROW.forEach(item=>{
+ARROW.forEach(item => {
   let el = document.createElement('div')
   el.className = "d-flex align-items-start"
   el.textContent = item
-  el.addEventListener("click", ()=>{
+  el.addEventListener("click", () => {
     handleEquation(item)
   })
   ARROW_WRAPPER.appendChild(el)
