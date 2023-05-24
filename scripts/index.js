@@ -1,6 +1,4 @@
-// Getting all comm nodes
 let persons = getCommPerson();
-//#region code for dragbar
 let isLeftDrag = false;
 let isRightDrag = false;
 let communication = getCommunication();
@@ -1387,7 +1385,6 @@ function onClickApplyNodeTableComm() {
   hiddenModal();
 }
 
-
 //day la code tao hoc theo
 function onDrogChangeAppComm() {
   openModal(
@@ -1466,7 +1463,6 @@ function onClickApplyChangeAppComm() {
   hiddenModal();
 }
 
-
 //day la code tao hoc theo
 function onDrogChangeAppComm1() {
   openModal(
@@ -1489,7 +1485,6 @@ function onClickApplyChangeAppComm1() {
   diagram.dataBind();
   hiddenModal();
 }
-
 
 function onClickApplyGroupOrAddEntities() {
   const element = document.getElementById("dialogGroupOrAddEntities");
@@ -2849,7 +2844,6 @@ var diagram = new ej.diagrams.Diagram({
   },
 });
 
-
 function selectionChange(args) {
 
 }
@@ -3349,8 +3343,6 @@ function endDrag() {
 //}
 }
 
-
-
 const loadDiagram = (data) => {
   const prevTool = diagram.tool;
   diagram.loadDiagram(data);
@@ -3618,6 +3610,33 @@ function onGetHtmlDialog(id) {
 
 function hiddenModal() {
   confirmDialogObjSub.hide();
+}
+
+/*
+  Only trigger the highlighter after document fully loaded.  This is
+  necessary for cases where page load takes a significant length
+  of time to fully load.
+*/
+
+function initDomain() {
+  /*
+    The short pause allows any required callback functions
+    to execute before actually highlighting, and allows
+    the JQuery $(document).ready wrapper to finish.
+   */
+  setTimeout(function() {
+    switchToTheory();
+  }, 1000);
+}
+
+if (document.readyState == 'complete') {
+  initDomain()
+} else {
+  document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+      initDomain()
+    }
+  }
 }
 
 $("#open-project-btn").on("click", () => {
