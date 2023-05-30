@@ -23,8 +23,11 @@ var equationData = [
   }
 ]
 
-function getEquations() {
-  return equationData.map((shape) => drawShape(shape))
+function getEquations(type) {
+  return equationData.map(shape => {
+    shape['id'] = shape['id'] + type
+    return shape
+  }).map((shape) => drawShape(shape))
 }
 
 

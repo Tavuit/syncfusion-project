@@ -21,7 +21,6 @@ let stability = getTheoryStability();
 let thoerylabel = getTheoryLabel();
 let quickTheory = getQuickTheory();
 let operatorTheory = getOperatorTheory();
-let equation = getEquations();
 fetch("https://restcountries.com/v3.1/all")
   .then((a) => a.json())
   .then((r) => {
@@ -51,7 +50,8 @@ let allShapes = []
   .concat(functions)
   .concat(stability)
   .concat(thoerylabel)
-  .concat(equation);
+  // .concat(getEquations('commPalette'))
+  // .concat(getEquations('theoryPalette'));
 
 allShapes = everyShape;
 
@@ -120,9 +120,9 @@ var commPalette = new ej.diagrams.SymbolPalette({
       title: "Label",
     },
     {
-      id: "Equations",
+      id: "EquationsCommPalette",
       expanded: false,
-      symbols: equation,
+      symbols: getEquations('commPalette'),
       title: "Equations"
     }
   ],
@@ -165,7 +165,7 @@ var theoryPalette = new ej.diagrams.SymbolPalette({
       symbols: quickTheory,
       title: "Quick Entities",
     },
-    {id: "system", expanded: true, symbols: system, title: "System"},
+    {id: "system", expanded: false, symbols: system, title: "System"},
     {id: "theory", expanded: false, symbols: thoery, title: "Theory"},
     {
       id: "fundamental",
@@ -205,6 +205,12 @@ var theoryPalette = new ej.diagrams.SymbolPalette({
       symbols: operatorTheory,
       title: "Operator",
     },
+    {
+      id: "EquationsTheoryPalette",
+      expanded: false,
+      symbols: getEquations('theoryPalette'),
+      title: "Equations"
+    }
   ],
   symbolHeight: 75,
   symbolWidth: 300,
@@ -3626,7 +3632,7 @@ function initDomain() {
    */
   setTimeout(function() {
     switchToTheory();
-  }, 1000);
+  }, 300);
 }
 
 if (document.readyState == 'complete') {
