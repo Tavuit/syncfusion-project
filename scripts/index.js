@@ -2739,7 +2739,7 @@ var diagram = new ej.diagrams.Diagram({
   },
   created: function (args) {
     getModelData();
-    openModelPage("main-project-model-comm");
+    // openModelPage("main-project-model-comm");
   },
   //Sets the default values of a node
   getNodeDefaults: function (node) {
@@ -3631,7 +3631,7 @@ function initDomain() {
     the JQuery $(document).ready wrapper to finish.
    */
   setTimeout(function() {
-    switchToTheory();
+    switchToComm();
   }, 300);
 }
 

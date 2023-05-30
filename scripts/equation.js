@@ -60,8 +60,11 @@ function getEquationBox() {
 }
 
 
-function handleEquation(operator) {
+function handleEquation(operator, style = null) {
   if (!getEquationBox()) return
   let mqInput = getEquationBox()
   mqInput.executeCommand(['insert', operator]);
+  if (style) {
+    mqInput.executeCommand(["applyStyle", style])
+  }
 }
