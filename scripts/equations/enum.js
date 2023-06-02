@@ -488,3 +488,112 @@ ARROW.forEach(item => {
   })
   ARROW_WRAPPER.appendChild(el)
 })
+
+var SPEAKLOGICFUNCTION = ["Communication", "A communication function with expected communication", "Negative communication", "Negative communication function", "An identify negative communication function",
+  "Person or employee", "Group or group of people", "Group function", "Communication function", "Error correction function of communication with error",
+  "Error correction function of an identified communication ", "An identify negative communication function with an identify negative communication",
+  "A specific communication ", "Communication function"]
+
+var SPEAKLOGICWORK = ["Natural word", "A natural word", "Word", "A word", "Bad word",
+  "Sentence", "A specific sentence", "Group of words", "The natural dictionary",
+  "A dictionary with more words", "A specific group of words", "Bad sentence",
+  "Group of bad words"]
+
+var SPEAKLOGICAPPLICATION = ["Idea of the application or simply application", "A specific application", "Idea of the application or simply application",
+  "Negative idea", "A specific application or specific idea", "A specific negative application or a specific negative idea"]
+
+var SPEAKLOGICTHEORY_1 = ["Communication theory", "Information theory", "Instrumentation theory", "Education theory",
+  "Power theorem", "Marketing theory", "Exchange system theory", "Work theory",
+  "Gaming theory", "Reproduction theory", "Utilization theory"]
+
+var SPEAKLOGICTHEORY_2 = ["Theory 1", "Theory 2", "Theory 3", "Theory 4", "Theory 5", "Theory 6", "Theory 7",
+  "Theory 8", "Theory 9", "Theory 10", "Theory ", "Specific theory", "Interpreted theory", "Presented theory", "Presented theory at specific time", "Presented specific theory"]
+
+var SPEAKLOGICFUNDAMENTAL = ["Fundamental of communication theory", "Fundamental of information theory", "Fundamental of instrumentation theory", "Fundamental of education theory",
+  "Fundamental of power theorem", "Fundamental of marketing theory", "Fundamental of exchange system theory", "Fundamental of work theory",
+  "Fundamental of gaming theory", "Fundamental of reproduction theory", "Fundamental of utilization theory"]
+
+var SPEAKLOGICDROPDOWNFUNDAMENTAL = ["Fundamental of theory 1", "Fundamental of theory 2", "Fundamental of theory 3", "Fundamental of theory 4",
+  "Fundamental of theory 5", "Fundamental of theory 6", "Fundamental of theory 7", "Fundamental of theory 8",
+  "Fundamental of theory 9", "Fundamental of theory 10", "Fundamental of theory", "Fundamental of specific theory",
+  "Fundamental of interpreted theory", "Fundamental of presented theory"]
+
+var SPEAKLOGICDROPDOWNFUNCTION = ["Functional system or life", "Existing function", "Added function", "Existing function plus added function",
+  "Sum of existing functions", "Sum of added functions", "Interpretation function", "Negative added function",
+  "Specific negative added function", "Specific existing function"]
+
+var SPEAKLOGICDROPDOWNTIME = ["Initial time", "Initial time later", "Initial time much later", "First presentation time",
+  "Later time after first presentation", "Second presentation time", "Later time after second presentation", "Third presentation time",
+  "Later time after third presentation", "Fourth presentation time", "Later time after fourth presentation ", "Time prime"]
+
+var SPEAKLOGICDERIVATIVE = ["Specific derivative from theory", "Derivative of instrument from theory", "Derivative of method from theory",
+  "Natural element", "Input element"]
+
+var SPEAKLOGICINSTRUMENT = ["Instrument", "Method ", "Transformation of theory or application of theory", "Transformation or application of specific theory",
+  "Instrument and its function", "Method and its function", "Instrument with specific function", "Method with specific function "]
+
+var SPEAKLOGICSTABILITY = ["Stability", "System ", "Philosophy or negative idea", "Specific system", "Specific philosophy", "System and philosophy", "Specific system and specific philosophy",
+  "System", "Specific system", "Change of philosophy", "Philosophy or negative philosophy", "Lost", "Gain", "Change of lost", "Specific lost", "Specific gain", "Lost at specific time",
+  "Gain at specific time", "change of gain", "Change of time", "Lost over time or simply change of lost over change of time", "Gain over time or simply change of gain over change of time",
+  "Bigger generation time", "Smaller generation time", "Generation time at specific time", "Distance", "Specific or identified distance", "Change of time", "Chane of time uphill or change of time up",
+  "Change of time downhill or change of time down", "Change of specific time"]
+
+var SPEAKLOGICTHEMREMS = ["Theorem", "Theorem from communication theory", "Theorem from information theory", "Theorem from instrumentation theory",
+  "Theorem from marketing theory", "Theorem from exchange system theory", "Theorem from work theory", "Theorem from gaming theory", "Specific theorem",
+  "Specific theorem from communication theory", "Specific theorem from information theory", "Specific theorem from instrumentation theory", "Specific theorem from marketing theory", "Specific theorem from exchange system theory",
+  "Specific theorem from work theory", "Specific theorem from gaming theory", "Theorem", "Specific theorem", "Theorem at specific time", "Theorem given", "Specific theorem given at specific time",]
+
+var SPEAKLOGICFUNCTION_WRAPPER = document.getElementById("listSubMenuSpeakLogicFunction1").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICWORK_WRAPPER = document.getElementById("listSubMenuSpeakLogicWord").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICAPPLICATION_WRAPPER = document.getElementById("listSubMenuSpeakLogicApplication").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICTHEORY_1_WRAPPER = document.getElementById("listSubMenuSpeakLogicTheory1").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICTHEORY_2_WRAPPER = document.getElementById("listSubMenuSpeakLogicTheory2").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICFUNDAMENTAL_WRAPPER = document.getElementById("listSubMenuSpeakLogicFundamental1").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICDROPDOWNFUNDAMENTAL_WRAPPER = document.getElementById("listSubMenuSpeakLogicFundamental2").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICDROPDOWNFUNCTION_WRAPPER = document.getElementById("listSubMenuSpeakLogicFunction2").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICDROPDOWNTIME_WRAPPER = document.getElementById("listSubMenuSpeakLogicTime").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICDERIVATIVE_WRAPPER = document.getElementById("listSubMenuSpeakLogicDerivative").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICINSTRUMENT_WRAPPER = document.getElementById("listSubMenuSpeakLogicInstrusment").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICSTABILITY_WRAPPER = document.getElementById("listSubMenuSpeakLogicStability").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+var SPEAKLOGICTHEMREMS_WRAPPER = document.getElementById("listSubMenuSpeakLogicTheorem").querySelector(".list-sub-menu-equations").querySelectorAll('.align-items-start')
+
+
+SPEAKLOGICFUNCTION_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICFUNCTION[index])
+})
+SPEAKLOGICWORK_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICWORK[index])
+})
+SPEAKLOGICAPPLICATION_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICAPPLICATION[index])
+})
+SPEAKLOGICTHEORY_1_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICTHEORY_1[index])
+})
+SPEAKLOGICTHEORY_2_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICTHEORY_2[index])
+})
+SPEAKLOGICFUNDAMENTAL_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICFUNDAMENTAL[index])
+})
+SPEAKLOGICDROPDOWNFUNDAMENTAL_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICDROPDOWNFUNDAMENTAL[index])
+})
+SPEAKLOGICDROPDOWNFUNCTION_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICDROPDOWNFUNCTION[index])
+})
+SPEAKLOGICDROPDOWNTIME_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICDROPDOWNTIME[index])
+})
+SPEAKLOGICDERIVATIVE_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICDERIVATIVE[index])
+})
+SPEAKLOGICINSTRUMENT_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICINSTRUMENT[index])
+})
+SPEAKLOGICSTABILITY_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICSTABILITY[index])
+})
+SPEAKLOGICTHEMREMS_WRAPPER.forEach((item, index) => {
+  $(item).attr('title', SPEAKLOGICTHEMREMS[index])
+})
