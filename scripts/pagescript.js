@@ -1088,6 +1088,23 @@ function otherSubModel(modelId) {
   // createsubmodel with data
 }
 
+function insertEquationComm() {
+  if (Object.keys(commEquation).length > 0) {
+    Object.keys(commEquation).forEach(item => {
+      handleEquation(commEquation[item], null, item)
+    })
+  }
+}
+
+
+function insertEquationTheory() {
+  if (Object.keys(theoryEquation).length > 0) {
+    Object.keys(theoryEquation).forEach(item => {
+      handleEquation(theoryEquation[item], null, item)
+    })
+  }
+}
+
 function openCommTab() {
   let pageList = document.getElementById("pageOptionList").children;
   if (pageList.length != 0) {
@@ -1108,6 +1125,7 @@ function openCommTab() {
     openModelPage(theoryPages[i]);
     closeModelPage(theoryPages[i]);
   }
+  insertEquationComm()
 }
 
 function openTheoryTab() {
@@ -1130,6 +1148,7 @@ function openTheoryTab() {
     openModelPage(commPages[i]);
     closeModelPage(commPages[i]);
   }
+  insertEquationTheory()
 }
 
 function showTooltipNodes() {

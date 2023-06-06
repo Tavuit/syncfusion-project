@@ -39,32 +39,44 @@ function isSelected() {
   return false
 }
 
-function isEquationBox() {
-  if (!isSelected()) return null
+function isEquationBox(id = null) {
+  var selectedItemDivID;
   var SALT = "_html_element"
-  var selectedItemDivID = diagram.selectedItems.wrapper.children[0].id;
-  var $wrapper = document.getElementById(`${selectedItemDivID + SALT}`)
+  if (!!id) {
+    selectedItemDivID = id
+  } else {
+    if (!isSelected()) return null
+    selectedItemDivID = diagram.selectedItems.wrapper.children[0].id;
+    selectedItemDivID = selectedItemDivID + SALT
+  }
+  var $wrapper = document.getElementById(selectedItemDivID)
   let mqInput = $wrapper.querySelectorAll("#mathquill-mathquill-input-border")[0]
   if (!mqInput) {
     alert("Selected node must be equation box")
     return null
   }
-  return mqInput
+  return [mqInput, selectedItemDivID]
 }
 
 
-function getEquationBox() {
-  let equationBox = isEquationBox()
+function getEquationBox(id = null) {
+  let equationBox = isEquationBox(id)
   if (!equationBox) return null
   return equationBox
 }
 
 
-function handleEquation(operator, style = null) {
-  if (!getEquationBox()) return
-  let mqInput = getEquationBox()
+function handleEquation(operator, style = null, id = null) {
+  if (!getEquationBox(id)) return
+  let [mqInput, ID] = getEquationBox(id)
   mqInput.executeCommand(['insert', operator]);
   if (style) {
     mqInput.executeCommand(["applyStyle", style])
+  }
+  if (currentDomain == 1) {
+    theoryEquation[ID] = mqInput.getValue()
+  }
+  if (currentDomain == 0) {
+    commEquation[ID] = mqInput.getValue()
   }
 }

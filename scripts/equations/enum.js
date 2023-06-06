@@ -326,7 +326,7 @@ var EQUATIONS_DATA = {
   "Fundamental_Dropdown_12": "f_{\\large{T}_{\\large{x}}}",
   "Fundamental_Dropdown_13": "f_{\\large{A}}",
   "Fundamental_Dropdown_14": "f_{\\large{A}'}",
-  "Dropdown_Function_1": "\\mathcal{\\large{L}(\\large{t})}",
+  "Dropdown_Function_1": "\\mathcal{\\large{\\scriptCapitalL}(\\large{t})}",
   "Dropdown_Function_2": "\\large{h(_{t})}",
   "Dropdown_Function_3": "\\large{u({t})}",
   "Dropdown_Function_4": "\\large{h(_{t})+u({t})}",
