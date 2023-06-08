@@ -80,3 +80,20 @@ function handleEquation(operator, style = null, id = null) {
     commEquation[ID] = mqInput.getValue()
   }
 }
+
+function styleMathLive() {
+  let shaDowRoot = document.querySelector('math-field').shadowRoot
+  if (!shaDowRoot.querySelector('style')) {
+    let style = document.createElement("style");
+    style.textContent = `
+    @font-face {
+      font-family: "nimbus_script-regular";
+      src: url("../icons/font/Nimbus_Script-Regular.ttf") format("truetype")
+    }
+    
+    .nimbusScript > .ML__mathit {
+      font-family: "nimbus_script-regular" !important;
+    }`;
+    document.querySelector('math-field').shadowRoot.appendChild(style)
+  }
+}

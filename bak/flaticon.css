@@ -7,6 +7,11 @@
   url("./flaticon.svg?1f6ce8ad16db9cedeb6d2af9cad595b9#flaticon") format("svg");
 }
 
+@font-face {
+  font-family: "nimbus-script";
+  src: url("NimbusScriptRegular.ttf") format("truetype");
+}
+
 
 .icon-40:before {
   position: relative;
