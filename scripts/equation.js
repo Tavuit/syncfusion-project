@@ -69,6 +69,8 @@ function getEquationBox(id = null) {
 function handleEquation(operator, style = null, id = null) {
   if (!getEquationBox(id)) return
   let [mqInput, ID] = getEquationBox(id)
+  mqInput.addEventListener("focusin", () =>  mathVirtualKeyboard.hide());
+  mqInput.addEventListener("focusout", () =>  mathVirtualKeyboard.hide());
   mqInput.executeCommand(['insert', operator]);
   if (style) {
     mqInput.executeCommand(["applyStyle", style])
