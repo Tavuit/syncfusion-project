@@ -1030,9 +1030,7 @@ ul {
   /*padding: 20px;*/
 }
 
-@media not (pointer: coarse) {
-  math-field::part(virtual-keyboard-toggle) {
-    display: none;
-  }
+math-field::part(virtual-keyboard-toggle) {
+  display: none;
 }
 
