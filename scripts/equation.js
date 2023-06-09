@@ -67,7 +67,6 @@ function getEquationBox(id = null) {
 
 
 function handleEquation(operator, style = null, id = null) {
-  // diableVirtualKeyboard()
   if (!getEquationBox(id)) return
   let [mqInput, ID] = getEquationBox(id)
   mqInput.executeCommand(['insert', operator]);
@@ -80,6 +79,7 @@ function handleEquation(operator, style = null, id = null) {
   if (currentDomain == 0) {
     commEquation[ID] = mqInput.getValue()
   }
+  styleMathLive()
 }
 
 function styleMathLive() {
@@ -97,16 +97,7 @@ function styleMathLive() {
     }`;
     document.querySelector('math-field').shadowRoot.appendChild(style)
   }
+  if (shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle')) {
+    shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
+  }
 }
-
-// function diableVirtualKeyboard() {
-//   let shaDowRoot = document.querySelector('math-field').shadowRoot
-//   if (!shaDowRoot.querySelector('style')) {
-//     let style = document.createElement("style");
-//     style.textContent = `
-//     .ML__virtual-keyboard-toggle {
-//       display: none !important;
-//     }`;
-//     document.querySelector('math-field').shadowRoot.appendChild(style)
-//   }
-// }

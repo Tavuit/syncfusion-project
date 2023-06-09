@@ -4,9 +4,6 @@ Object.entries(EQUATIONS_DATA).forEach(item => {
   } else {
     $(document).on("click", `#${item[0]}`, () => {
       handleEquation(item[1])
-      if (item[0] === 'Dropdown_Function_1') {
-        styleMathLive()
-      }
     })
   }
 })

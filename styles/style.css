@@ -1030,7 +1030,6 @@ ul {
   /*padding: 20px;*/
 }
 
-math-field::part(.ML__virtual-keyboard-toggle) {
+math-field::part(virtual-keyboard-toggle) {
   display: none !important;
 }
-
