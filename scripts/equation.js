@@ -80,7 +80,6 @@ function handleEquation(operator, style = null, id = null) {
     commEquation[ID] = mqInput.getValue()
   }
   styleMathLive()
-  handleKeyboard()
 }
 
 function styleMathLive() {
@@ -99,13 +98,6 @@ function styleMathLive() {
     document.querySelector('math-field').shadowRoot.appendChild(style)
   }
   if (shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle')) {
-    shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
+    // shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
   }
-}
-
-function handleKeyboard() {
-  document.querySelector('math-field').addEventListener('focus', () => {
-    mathVirtualKeyboard.layouts = ["minimalist"];
-    mathVirtualKeyboard.visible = true;
-  });
 }
