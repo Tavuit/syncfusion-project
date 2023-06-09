@@ -67,7 +67,7 @@ function getEquationBox(id = null) {
 
 
 function handleEquation(operator, style = null, id = null) {
-  diableVirtualKeyboard()
+  // diableVirtualKeyboard()
   if (!getEquationBox(id)) return
   let [mqInput, ID] = getEquationBox(id)
   mqInput.executeCommand(['insert', operator]);
@@ -99,14 +99,14 @@ function styleMathLive() {
   }
 }
 
-function diableVirtualKeyboard() {
-  let shaDowRoot = document.querySelector('math-field').shadowRoot
-  if (!shaDowRoot.querySelector('style')) {
-    let style = document.createElement("style");
-    style.textContent = `
-    .ML__virtual-keyboard-toggle {
-      display: none !important;
-    }`;
-    document.querySelector('math-field').shadowRoot.appendChild(style)
-  }
-}
+// function diableVirtualKeyboard() {
+//   let shaDowRoot = document.querySelector('math-field').shadowRoot
+//   if (!shaDowRoot.querySelector('style')) {
+//     let style = document.createElement("style");
+//     style.textContent = `
+//     .ML__virtual-keyboard-toggle {
+//       display: none !important;
+//     }`;
+//     document.querySelector('math-field').shadowRoot.appendChild(style)
+//   }
+// }
