@@ -69,8 +69,6 @@ function getEquationBox(id = null) {
 function handleEquation(operator, style = null, id = null) {
   if (!getEquationBox(id)) return
   let [mqInput, ID] = getEquationBox(id)
-  mqInput.addEventListener("focusin", () =>  mathVirtualKeyboard.hide());
-  mqInput.addEventListener("focusout", () =>  mathVirtualKeyboard.hide());
   mqInput.executeCommand(['insert', operator]);
   if (style) {
     mqInput.executeCommand(["applyStyle", style])
@@ -82,6 +80,7 @@ function handleEquation(operator, style = null, id = null) {
     commEquation[ID] = mqInput.getValue()
   }
   styleMathLive()
+  handleKeyboard()
 }
 
 function styleMathLive() {
@@ -102,4 +101,11 @@ function styleMathLive() {
   if (shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle')) {
     shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
   }
+}
+
+function handleKeyboard() {
+  document.querySelector('math-field').addEventListener('focus', () => {
+    mathVirtualKeyboard.layouts = ["minimalist"];
+    mathVirtualKeyboard.visible = true;
+  });
 }
