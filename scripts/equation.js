@@ -50,7 +50,7 @@ function isEquationBox(id = null) {
     selectedItemDivID = selectedItemDivID + SALT
   }
   var $wrapper = document.getElementById(selectedItemDivID)
-  let mqInput = $wrapper.querySelectorAll("#mathquill-mathquill-input-border")[0]
+  let mqInput = $wrapper.querySelector("#mathquill-mathquill-input-border")
   if (!mqInput) {
     alert("Selected node must be equation box")
     return null
@@ -73,6 +73,7 @@ function handleEquation(operator, style = null, id = null) {
   if (style) {
     mqInput.executeCommand(["applyStyle", style])
   }
+  mathVirtualKeyboard.hide();
   if (currentDomain == 1) {
     theoryEquation[ID] = mqInput.getValue()
   }
@@ -98,6 +99,6 @@ function styleMathLive() {
     document.querySelector('math-field').shadowRoot.appendChild(style)
   }
   if (shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle')) {
-    // shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
+    shaDowRoot.querySelector('div.ML__virtual-keyboard-toggle').remove()
   }
 }

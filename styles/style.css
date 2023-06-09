@@ -1029,7 +1029,6 @@ ul {
   align-items: center;
   /*padding: 20px;*/
 }
-
 math-field::part(virtual-keyboard-toggle) {
   display: none !important;
 }
