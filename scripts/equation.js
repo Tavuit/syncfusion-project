@@ -90,7 +90,9 @@ function styleMathLive() {
     style.textContent = `
     @font-face {
       font-family: "nimbus_script-regular";
-      src: url("../icons/font/Nimbus_Script-Regular.ttf") format("truetype")
+      src: url("../icons/font/Nimbus_Script-Regular.ttf") format("truetype"),
+      url("../icons/font/Nimbus_Script-Regular.woff") format("woff"),
+      url("../icons/font/Nimbus_Script-Regular.woff2") format("woff2")
     }
     
     .nimbusScript > .ML__mathit {
