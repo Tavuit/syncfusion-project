@@ -2758,6 +2758,52 @@
       </div>
     </div>
   </div>
+  <!-- The modal container -->
+  <div id="media-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="content-media">
+        <button class="media_function" id="capture-image">
+          <div class="btn-content">
+            <img src="/icons/image/captureimageproject.png" alt="captureImage">
+            <span>Capture Image</span>
+          </div>
+        </button>
+        <button class="media_function" id="edit-image">
+          <div class="btn-content">
+            <img src="/icons/image/editimageproject.png" alt="editImage">
+            <span>Edit Image</span>
+          </div>
+        </button>
+        <button class="media_function" id="record-video">
+          <div class="btn-content">
+            <img src="/icons/image/reconrdvideoproject.png" alt="recordVideo">
+            <span>Record Video</span>
+          </div>
+        </button>
+        <button class="media_function" id="edit-video">
+          <div class="btn-content">
+            <img src="/icons/image/editvideoproject.png" alt="editVideo">
+            <span>Edit Video</span>
+          </div>
+        </button>
+        <button class="media_function" id="record-audio">
+          <div class="btn-content">
+            <img src="/icons/image/recordaudioproject.png" alt="recordAudio">
+            <span>Record Audio</span>
+          </div>
+        </button>
+        <button class="media_function" id="settings">
+          <div class="btn-content">
+            <img src="/icons/image/settingproject.png" alt="settings">
+            <span>Settings</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 <input
     type="file"
@@ -2772,7 +2818,7 @@
   var theoryPages = [];
   var commEquation = {};
   var theoryEquation = {};
-  const MathQuill = window.MathQuill;
+  var MathQuill = window.MathQuill;
 </script>
 <script src="./scripts/equations/enum.js"></script>
 <script src="./scripts/allshapes.js"></script>
@@ -2785,7 +2831,8 @@
 <script src="./scripts/theoryData.js"></script>
 <script src="./scripts/index.js"></script>
 <script src="./scripts/helpers.js"></script>
-<script src="scripts/equations/handle.js"></script>
+<script src="./scripts/equations/handle.js"></script>
+<script src="./scripts/mediaFunction/index.js"></script>
 <!--Svg Icons -->
 <div hidden>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none">

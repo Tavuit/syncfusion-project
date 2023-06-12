@@ -1130,17 +1130,19 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 captureimageproject",
+                  click: "openModal"
                 },
               },
               {
-                id: "reOpenProject",
-                text: "Reopen Project",
-                toolTip: "Reopen Project",
+                id: "editimageproject",
+                text: "Edit Image",
+                toolTip: "Edit Image",
                 height: "70px",
                 buttonSettings: {
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 editimageproject",
+                  click: "openModal"
                 },
               },
               {
@@ -1152,6 +1154,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 reconrdvideoproject",
+                  click: "openModal"
                 },
               },
               {
@@ -1163,6 +1166,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 editvideoproject",
+                  click: "openModal"
                 },
               },
               {
@@ -1174,6 +1178,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 recordaudioproject",
+                  click: "openModal"
                 },
               },
               {
@@ -1185,6 +1190,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 settingproject",
+                  click: "openModal"
                 },
               },
             ],
