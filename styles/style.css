@@ -1117,25 +1117,25 @@ math-field::part(virtual-keyboard-toggle) {
 }
 
 #capture-image > .btn-content > .btn-preview {
-  background-image: url('../image/captureimageproject.png');
+  background-image: url('../icons/image/captureimageproject.png');
 }
 
 #edit-image > .btn-content > .btn-preview {
-  background-image: url('../image/editimageproject.png');
+  background-image: url('../icons/image/editimageproject.png');
 }
 
 #record-video > .btn-content > .btn-preview {
-  background-image: url('../image/reconrdvideoproject1.png');
+  background-image: url('../icons/image/reconrdvideoproject1.png');
 }
 
 #edit-video > .btn-content > .btn-preview {
-  background-image: url('../image/editvideoproject.png');
+  background-image: url('../icons/image/editvideoproject.png');
 }
 
 #record-audio > .btn-content > .btn-preview {
-  background-image: url('../image/recordaudioproject1.png');
+  background-image: url('../icons/image/recordaudioproject1.png');
 }
 
 #settings > .btn-content > .btn-preview {
-  background-image: url('../image/settingproject1.png');
+  background-image: url('../icons/image/settingproject1.png');
 }
