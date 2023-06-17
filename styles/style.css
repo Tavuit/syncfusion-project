@@ -1099,6 +1099,13 @@ math-field::part(virtual-keyboard-toggle) {
   align-items: center;
 }
 
+.modal-content > .content-media > .media_function .btn-content > .btn-preview {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .modal-content > .content-media > .media_function .btn-content > img {
   object-fit: scale-down;
   width: 60px;
@@ -1107,4 +1114,28 @@ math-field::part(virtual-keyboard-toggle) {
 
 .modal-content > .content-media > .media_function .btn-content > span {
   font-size: 12px;
+}
+
+#capture-image > .btn-content > .btn-preview {
+  background-image: url("/icons/image/captureimageproject.png");
+}
+
+#edit-image > .btn-content > .btn-preview {
+  background-image: url("/icons/image/editimageproject.png");
+}
+
+#record-video > .btn-content > .btn-preview {
+  background-image: url("/icons/image/reconrdvideoproject.png");
+}
+
+#edit-video > .btn-content > .btn-preview {
+  background-image: url("/icons/image/editvideoproject.png");
+}
+
+#record-audio > .btn-content > .btn-preview {
+  background-image: url("/icons/image/recordaudioproject.png");
+}
+
+#settings > .btn-content > .btn-preview {
+  background-image: url("/icons/image/settingproject.png");
 }
