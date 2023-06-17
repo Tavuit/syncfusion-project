@@ -1117,67 +1117,25 @@ math-field::part(virtual-keyboard-toggle) {
 }
 
 #capture-image > .btn-content > .btn-preview {
-  background-image: url("/icons/image/captureimageproject.png");
-}
-
-#capture-image > .btn-content > .btn-preview:before {
-  content: url('../image/captureimageproject.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/captureimageproject.png');
 }
 
 #edit-image > .btn-content > .btn-preview {
-  background-image: url("/icons/image/editimageproject.png");
-}
-
-#edit-image > .btn-content > .btn-preview:before {
-  content: url('../image/editimageproject.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/editimageproject.png');
 }
 
 #record-video > .btn-content > .btn-preview {
-  background-image: url("/icons/image/reconrdvideoproject.png");
-}
-
-#record-video > .btn-content > .btn-preview:before {
-  content: url('../image/reconrdvideoproject1.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/reconrdvideoproject1.png');
 }
 
 #edit-video > .btn-content > .btn-preview {
-  background-image: url("/icons/image/editvideoproject.png");
-}
-
-#edit-video > .btn-content > .btn-preview:before {
-  content: url('../image/editvideoproject.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/editvideoproject.png');
 }
 
 #record-audio > .btn-content > .btn-preview {
-  background-image: url("/icons/image/recordaudioproject.png");
-}
-
-#record-audio > .btn-content > .btn-preview:before {
-  content: url('../image/recordaudioproject1.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/recordaudioproject1.png');
 }
 
 #settings > .btn-content > .btn-preview {
-  background-image: url("/icons/image/settingproject.png");
-}
-
-#settings > .btn-content > .btn-preview:before {
-  content: url('../image/settingproject1.png');
-  position: relative;
-  left: 0px;
-  top: 0px;
+  background-image: url('../image/settingproject1.png');
 }
