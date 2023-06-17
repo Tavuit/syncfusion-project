@@ -17,6 +17,8 @@
   <script src="resources/jquery-3.6.0.js"></script>
   <script src="resources/Ej1/Script/ej.web.all.min.js"></script>
   <script src="resources/EJ2/Script/ej2.min.js" type="text/javascript"></script>
+<!--  <script src="resources/Ej_es5/ej2.min.js" type="text/javascript"></script>-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pdfkit@0.13.0/js/pdfkit.min.js"></script>
   <script src="//ej2.syncfusion.com/javascript/demos/dialog/draggable/datasource.js" type="text/javascript"></script>
@@ -40,6 +42,10 @@
   <!--  Media-->
   <script src="resources/html2canvas/html2canvas.js"></script>
   <script src="resources/FileSaver/FileSaver.js"></script>
+
+  <link rel="stylesheet"  href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css"/>
+  <script defer src="https://uicdn.toast.com/tui-color-picker/v2.2.6/tui-color-picker.js"></script>
+  <script defer src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
   <script>
     var ce;
     window.onload = function () {
@@ -2762,49 +2768,42 @@
   </div>
   <!-- The modal container -->
   <div id="media-modal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
       <div class="content-media">
         <button class="media_function" id="capture-image">
           <div class="btn-content">
-<!--            <img src="/icons/image/captureimageproject.png" alt="captureImage">-->
             <div class="btn-preview"></div>
             <span>Capture Image</span>
           </div>
         </button>
         <button class="media_function" id="edit-image">
           <div class="btn-content">
-<!--            <img src="/icons/image/editimageproject.png" alt="editImage">-->
             <div class="btn-preview"></div>
             <span>Edit Image</span>
           </div>
         </button>
         <button class="media_function" id="record-video">
           <div class="btn-content">
-<!--            <img src="/icons/image/reconrdvideoproject.png" alt="recordVideo">-->
             <div class="btn-preview"></div>
             <span>Record Video</span>
           </div>
         </button>
         <button class="media_function" id="edit-video">
           <div class="btn-content">
-<!--            <img src="/icons/image/editvideoproject.png" alt="editVideo">-->
             <div class="btn-preview"></div>
             <span>Edit Video</span>
           </div>
         </button>
         <button class="media_function" id="record-audio">
           <div class="btn-content">
-<!--            <img src="/icons/image/recordaudioproject.png" alt="recordAudio">-->
             <div class="btn-preview"></div>
             <span>Record Audio</span>
           </div>
         </button>
         <button class="media_function" id="settings">
           <div class="btn-content">
-<!--            <img src="/icons/image/settingproject.png" alt="settings">-->
             <div class="btn-preview"></div>
             <span>Settings</span>
           </div>
@@ -2812,11 +2811,27 @@
       </div>
     </div>
   </div>
-</div>
+  <div id="editor-modal" class="modal">
+    <!-- Modal content -->
+    <div class="model-editor">
+      <span class="close">&times;</span>
+      <div id="image-editor">
+        <canvas></canvas>
+      </div>
+    </div>
+  </div>
+  </div>
 <input
     type="file"
     id="fileUploadToDiagrams"
     name="fileUploadToDiagrams"
+    style="display: none"
+/>
+<input
+    type="file"
+    id="fileUploadToEditor"
+    name="fileUploadToEditor"
+    accept="image/png, image/gif, image/jpeg"
     style="display: none"
 />
 <script>

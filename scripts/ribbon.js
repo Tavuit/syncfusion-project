@@ -1130,7 +1130,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 captureimageproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
               {
@@ -1142,7 +1142,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 editimageproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
               {
@@ -1154,7 +1154,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 reconrdvideoproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
               {
@@ -1166,7 +1166,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 editvideoproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
               {
@@ -1178,7 +1178,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 recordaudioproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
               {
@@ -1190,7 +1190,7 @@ var tabs = [
                   contentType: ej.ContentType.TextAndImage,
                   imagePosition: ej.ImagePosition.ImageTop,
                   prefixIcon: "icon-40 settingproject",
-                  click: "openModal"
+                  click: "openMediaModal"
                 },
               },
             ],

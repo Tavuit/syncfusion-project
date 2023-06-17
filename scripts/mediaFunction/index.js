@@ -1,46 +1,52 @@
 // Get the modal
-var modal = document.getElementById("media-modal");
+var mediaModal = document.getElementById("media-modal");
+var editorModal = document.getElementById("editor-modal");
 
 // Get the close button
-var closeBtn = modal.getElementsByClassName("close")[0];
+var closeMediaBtn = mediaModal.querySelector(".close");
+var closeEditorBtn = editorModal.querySelector(".close");
 
 // When the user clicks on the button, open the modal
-function openModal() {
-  modal.style.display = "block";
+function openMediaModal() {
+  mediaModal.style.display = "block";
+}
+
+function closeMediaModal() {
+  mediaModal.style.display = "none";
+}
+
+function openEditorModal() {
+  editorModal.style.display = "block";
+}
+
+function closeEditorModal() {
+  editorModal.style.display = "none";
 }
 
 // When the user clicks on the close button, close the modal
-closeBtn.onclick = function () {
-  modal.style.display = "none";
+closeMediaBtn.onclick = function () {
+  mediaModal.style.display = "none";
+}
+closeEditorBtn.onclick = function () {
+  editorModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "block";
+  if (event.target == mediaModal || event.target == editorModal) {
+    mediaModal.style.display = "block";
+    editorModal.style.display = "block";
   }
 }
 
 function dataURItoBlob(dataURI) {
-  // convert base64 to raw binary data held in a string
-  // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
   var byteString = atob(dataURI.split(',')[1]);
-
-  // separate out the mime component
   var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
-
-  // write the bytes of the string to an ArrayBuffer
   var ab = new ArrayBuffer(byteString.length);
-
-  // create a view into the buffer
   var ia = new Uint8Array(ab);
-
-  // set the bytes of the buffer to the correct values
   for (var i = 0; i < byteString.length; i++) {
     ia[i] = byteString.charCodeAt(i);
   }
-
-  // write the ArrayBuffer to a blob, and you're done
   var blob = new Blob([ab], {type: mimeString});
   return blob;
 
@@ -57,7 +63,8 @@ async function recordScreen() {
 
 }
 
-function createRecorder(stream, mimeType) {
+function createRecorder(stream) {
+  let mimeType = 'video/webm';
   let recordedChunks = [];
   const mediaRecorder = new MediaRecorder(stream);
   mediaRecorder.ondataavailable = function (e) {
@@ -97,18 +104,16 @@ function saveFileVideo(recordedChunks) {
 }
 
 
-
 function saveFileCapture(base64Image) {
   var blobImage = dataURItoBlob(base64Image)
   saveAs(blobImage, "screen-capture.png");
 }
 
 
-var recordVideo = document.getElementById('record-video'), mediaRecorder;
+var recordVideo = document.getElementById('record-video');
 recordVideo.addEventListener('click', async function () {
-  let mimeType = 'video/webm';
   let stream = await recordScreen();
-  mediaRecorder = createRecorder(stream, mimeType);
+  createRecorder(stream)
 })
 
 
@@ -119,3 +124,43 @@ captureScreen.addEventListener('click', async function () {
 })
 
 
+function imageEditor(URL, fileName) {
+  closeMediaModal()
+  openEditorModal()
+  const imageEditor = new tui.ImageEditor(document.querySelector('#image-editor'), {
+    includeUI: {
+      loadImage: {
+        path: URL,
+        name: fileName,
+      },
+      initMenu: 'filter',
+      menuBarPosition: 'bottom',
+    },
+    cssMaxWidth: 700,
+    cssMaxHeight: 500,
+    selectionStyle: {
+      cornerSize: 20,
+      rotatingPointOffset: 70,
+    },
+  });
+}
+
+var editor = document.getElementById('edit-image');
+editor.addEventListener('click', function () {
+  var upload = document.getElementById("fileUploadToEditor")
+  upload.addEventListener('change', function () {
+    var selectedFile = upload.files[0];
+    var fileName = selectedFile.name
+    var idxDot = fileName.lastIndexOf(".") + 1;
+    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile=="jpg" || extFile=="jpeg" || extFile=="png"){
+      fileName = fileName.split('.').slice(0, -1).join('.')
+      var urlFile = URL.createObjectURL(selectedFile)
+      imageEditor(urlFile, fileName)
+    }else{
+      alert("Only jpg/jpeg and png files are allowed!");
+      upload.value = "";
+    }
+  });
+  upload.click()
+})

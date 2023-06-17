@@ -1057,6 +1057,15 @@ math-field::part(virtual-keyboard-toggle) {
   width: 40%; /* Could be more or less, depending on screen size */
 }
 
+.model-editor {
+  background-color: #fefefe;
+  margin: 46px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height: 90%;
+}
+
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -1138,4 +1147,12 @@ math-field::part(virtual-keyboard-toggle) {
 
 #settings > .btn-content > .btn-preview {
   background-image: url('../icons/image/settingproject1.png');
+}
+
+.tui-image-editor-header-logo {
+  display: none !important;
+}
+
+#image-editor {
+  height: 95% !important;
 }
