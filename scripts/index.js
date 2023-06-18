@@ -422,7 +422,6 @@ function relatePersonOperatingPrinciple(id) {
     idFind = "principle";
   }
 
-  console.log(id, getItemById(ellipseBasic));
   const itemActive = diagram.selectedItems.properties.nodes[0];
 
   let findItem;
@@ -2740,6 +2739,11 @@ var diagram = new ej.diagrams.Diagram({
   created: function (args) {
     getModelData();
     // openModelPage("main-project-model-comm");
+  },
+  click: function click(args) {
+    if (!(args.element instanceof ej.diagrams.Node || args.element instanceof ej.diagrams.Connector)) {
+      diagram.clearSelection();
+    }
   },
   //Sets the default values of a node
   getNodeDefaults: function (node) {
