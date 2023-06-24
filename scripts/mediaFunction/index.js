@@ -34,8 +34,12 @@ closeEditorBtn.onclick = function () {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == mediaModal || event.target == editorModal) {
-    mediaModal.style.display = "block";
-    editorModal.style.display = "block";
+    if (mediaModal.style.display == "block") {
+      return
+    }
+    if (editorModal.style.display == "block") {
+      return
+    }
   }
 }
 
@@ -54,13 +58,11 @@ function dataURItoBlob(dataURI) {
 
 async function recordScreen() {
   if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
-    console.log("Let's get this party started")
     return await navigator.mediaDevices.getDisplayMedia({
-      audio: true,
-      video: {mediaSource: "screen"}
+      audio: true, video: {mediaSource: "screen"}
     });
   }
-
+  return null
 }
 
 function createRecorder(stream) {
@@ -110,57 +112,120 @@ function saveFileCapture(base64Image) {
 }
 
 
-var recordVideo = document.getElementById('record-video');
-recordVideo.addEventListener('click', async function () {
-  let stream = await recordScreen();
-  createRecorder(stream)
-})
-
-
-var captureScreen = document.getElementById('capture-image');
-captureScreen.addEventListener('click', async function () {
-  let stream = await recordScreen();
-  await createCapture(stream)
-})
-
-
 function imageEditor(URL, fileName) {
   closeMediaModal()
   openEditorModal()
   const imageEditor = new tui.ImageEditor(document.querySelector('#image-editor'), {
     includeUI: {
       loadImage: {
-        path: URL,
-        name: fileName,
-      },
-      initMenu: 'filter',
-      menuBarPosition: 'bottom',
-    },
-    cssMaxWidth: 700,
-    cssMaxHeight: 500,
-    selectionStyle: {
-      cornerSize: 20,
-      rotatingPointOffset: 70,
+        path: URL, name: fileName,
+      }, initMenu: 'filter', menuBarPosition: 'bottom',
+    }, cssMaxWidth: 700, cssMaxHeight: 500, selectionStyle: {
+      cornerSize: 20, rotatingPointOffset: 70,
     },
   });
 }
 
-var editor = document.getElementById('edit-image');
-editor.addEventListener('click', function () {
+$(document).on("click", `#record-video`, async function () {
+  let area = await getArea()
+  let stream = await recordScreen();
+  if (stream) {
+    createRecorder(stream)
+  } else {
+    alert("Browser not supported! Please use a different browser.");
+  }
+})
+
+$(document).on("click", `#capture-image`, async function () {
+  let area = await getArea()
+  let stream = await recordScreen();
+  if (stream) {
+    await createCapture(stream)
+  } else {
+    alert("Browser not supported! Please use a different browser.");
+  }
+})
+
+$(document).on("click", `#edit-image`, function () {
   var upload = document.getElementById("fileUploadToEditor")
-  upload.addEventListener('change', function () {
+  $(document).on('change', '#fileUploadToEditor', function () {
     var selectedFile = upload.files[0];
     var fileName = selectedFile.name
     var idxDot = fileName.lastIndexOf(".") + 1;
     var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-    if (extFile=="jpg" || extFile=="jpeg" || extFile=="png"){
+    if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
       fileName = fileName.split('.').slice(0, -1).join('.')
       var urlFile = URL.createObjectURL(selectedFile)
       imageEditor(urlFile, fileName)
-    }else{
+    } else {
       alert("Only jpg/jpeg and png files are allowed!");
       upload.value = "";
     }
-  });
+  })
   upload.click()
 })
+
+
+function getArea(start = null, end = null) {
+  return new Promise((resolve) => {
+    var container = document.getElementById("app-content");
+    var selectionArea = document.getElementById("selection-area");
+
+    function drawSelectionArea(isReset = false) {
+      // Set the style and position of the selection area element
+      if (isReset) {
+        selectionArea.style.left = 0;
+        selectionArea.style.top = 0;
+        selectionArea.style.width = 0;
+        selectionArea.style.height = 0;
+      } else {
+        selectionArea.style.left = Math.min(start.x, end.x) + "px";
+        selectionArea.style.top = Math.min(start.y, end.y) + "px";
+        selectionArea.style.width = Math.abs(start.x - end.x) + "px";
+        selectionArea.style.height = Math.abs(start.y - end.y) + "px";
+      }
+    }
+
+    function onMouseDown(e) {
+      start = getCursorPosition(e);
+      selectionArea.style.display = "block";
+    }
+
+    function onMouseMove(e) {
+      if (!start) return;
+
+      // Get the end point and draw the selection area
+      end = getCursorPosition(e);
+      drawSelectionArea();
+    }
+
+    function onMouseUp(e) {
+      if (!start) return;
+      selectionArea.style.display = "none";
+      container.style.opacity = 1
+      container.removeEventListener("mousedown", onMouseDown);
+      container.removeEventListener("mousemove", onMouseMove);
+      container.removeEventListener("mouseup", onMouseUp);
+
+      resolve({startX: start.x, startY: start.y, endX: end.x, endY: end.y})
+    }
+
+    function getCursorPosition(e) {
+      var rect = container.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      return {x: x, y: y};
+    }
+
+
+    function initArea() {
+      drawSelectionArea(true);
+      container.style.opacity = 0.5
+      container.addEventListener("mousedown", onMouseDown);
+      container.addEventListener("mousemove", onMouseMove);
+      container.addEventListener("mouseup", onMouseUp);
+    }
+
+    initArea()
+  })
+}
