@@ -1145,6 +1145,10 @@ math-field::part(virtual-keyboard-toggle) {
   background-image: url('../icons/image/recordaudioproject1.png');
 }
 
+#stop-record-audio > .btn-content > .btn-preview {
+  background-image: url('../icons/image/stopRecordAudio.jpg');
+}
+
 #settings > .btn-content > .btn-preview {
   background-image: url('../icons/image/settingproject1.png');
 }

@@ -6,6 +6,8 @@ var editorModal = document.getElementById("editor-modal");
 var closeMediaBtn = mediaModal.querySelector(".close");
 var closeEditorBtn = editorModal.querySelector(".close");
 
+var audioRecording = false;
+
 // When the user clicks on the button, open the modal
 function openMediaModal() {
   mediaModal.style.display = "block";
@@ -56,11 +58,13 @@ function dataURItoBlob(dataURI) {
 
 }
 
-async function recordScreen() {
+async function recordScreen(audio = true, video = true) {
+  const constaints = {};
+  constaints['audio'] = audio;
+  constaints['video'] = !!video ? {mediaSource: "screen"} : false;
   if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
-    return await navigator.mediaDevices.getDisplayMedia({
-      audio: true, video: {mediaSource: "screen"}
-    });
+    console.log(constaints, 'containts')
+    return await navigator.mediaDevices.getDisplayMedia(constaints);
   }
   return null
 }
@@ -127,7 +131,6 @@ function imageEditor(URL, fileName) {
 }
 
 $(document).on("click", `#record-video`, async function () {
-  let area = await getArea()
   let stream = await recordScreen();
   if (stream) {
     createRecorder(stream)
@@ -137,7 +140,6 @@ $(document).on("click", `#record-video`, async function () {
 })
 
 $(document).on("click", `#capture-image`, async function () {
-  let area = await getArea()
   let stream = await recordScreen();
   if (stream) {
     await createCapture(stream)
@@ -163,7 +165,39 @@ $(document).on("click", `#edit-image`, function () {
     }
   })
   upload.click()
+});
+var mediaRecorder = null;
+var stopRecordAuto = $('#stop-record-audio');
+$(document).on("click", `#record-audio`, async function () {
+  try {
+    let stream = await navigator.mediaDevices.getUserMedia({audio: true, video: false});
+    if (stream) {
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.start();
+      let chunks = [];
+      mediaRecorder.ondataavailable = (e)=>{
+        chunks.push(e.data);
+      }
+      mediaRecorder.onerror = (e)=>{
+        alert(e.error);
+      }
+      mediaRecorder.onstop = (e)=>{
+        let blod = new Blob(chunks);
+        saveAs(blod, 'audio-record.mp3');
+        this.style.display = "block"
+        stopRecordAuto[0].style.display = "none";
+      }
+      this.style.display = "none"
+      stopRecordAuto[0].style.display = "block";
+    }
+  } catch (err) {
+    console.error(err)
+  }
 })
+
+$(document).on("click", '#stop-record-audio', function() {
+  mediaRecorder.stop();
+});
 
 
 function getArea(start = null, end = null) {
