@@ -1139,9 +1139,12 @@ math-field::part(virtual-keyboard-toggle) {
 
 .setting-label {
   position: absolute;
-  top: -24px;
+  top: -16px;
   z-index: 1;
   background-color: white;
+
+  width: 10rem;
+  text-align: center;
 }
 
 .video-recording {
