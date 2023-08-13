@@ -11,6 +11,17 @@ var audioRecording = false;
 var audioOutputDevices = [];
 var audioInputDevices = [];
 
+var hardwareEncording;
+var videoDevice = {
+  output: null,
+  input: null
+}
+
+var audioDevice = {
+  playback: true,
+  mic: null
+}
+
 // When the user clicks on the button, open the modal
 function openSettingModel() {
   settingModel.style.display = "block";
@@ -42,6 +53,7 @@ closeMediaBtn.onclick = function () {
 }
 closeEditorBtn.onclick = function () {
   editorModal.style.display = "none";
+  openMediaModal();
 }
 closeSettingBtn.onclick = function () {
   settingModel.style.display = "none";
@@ -189,13 +201,13 @@ $(document).on("click", `#record-audio`, async function () {
       mediaRecorder = new MediaRecorder(stream);
       mediaRecorder.start();
       let chunks = [];
-      mediaRecorder.ondataavailable = (e)=>{
+      mediaRecorder.ondataavailable = (e) => {
         chunks.push(e.data);
       }
-      mediaRecorder.onerror = (e)=>{
+      mediaRecorder.onerror = (e) => {
         alert(e.error);
       }
-      mediaRecorder.onstop = (e)=>{
+      mediaRecorder.onstop = (e) => {
         let blod = new Blob(chunks);
         saveAs(blod, 'audio-record.mp3');
         this.style.display = "block"
@@ -209,7 +221,7 @@ $(document).on("click", `#record-audio`, async function () {
   }
 })
 
-$(document).on("click", '#stop-record-audio', function() {
+$(document).on("click", '#stop-record-audio', function () {
   mediaRecorder.stop();
 });
 
@@ -229,13 +241,13 @@ function getDevices() {
         var audio_out_select = settingModel.querySelector("#list-audio-out");
         var audio_in_select = settingModel.querySelector("#list-audio-in");
         var mic_select = settingModel.querySelector("#list-mic-setting");
-        audioOutputDevices.forEach(item=>{
+        audioOutputDevices.forEach(item => {
           var option = document.createElement("option");
           option.text = item['label'];
           option.value = item['deviceId'];
           audio_out_select.appendChild(option);
         })
-        audioInputDevices.forEach(item=>{
+        audioInputDevices.forEach(item => {
           var optionAudioIn = document.createElement("option");
           var optionMicIn = document.createElement("option");
           optionAudioIn.text = item['label'];
@@ -253,7 +265,9 @@ function getDevices() {
     console.error('enumerateDevices not supported.');
   }
 }
+
 getDevices();
+
 function getArea(start = null, end = null) {
   return new Promise((resolve) => {
     var container = document.getElementById("app-content");
