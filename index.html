@@ -2826,6 +2826,40 @@
       </div>
     </div>
   </div>
+  <div id="settings-model" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="video-recording">
+        <span class="setting-label">Video Recording</span>
+        <div class="hardwareSettings">
+          <input type="checkbox" id="hardwareSettings">
+          <span>Enable Hardware Encoding</span>
+        </div>
+        <div class="audioOutSettings">
+          <input type="checkbox" id="audio-out">
+          <span class="label-with-select">Audio out</span>
+          <select name="list-audio-out" id="list-audio-out"></select>
+        </div>
+        <div class="audioInSettings">
+          <input type="checkbox" id="audio-in">
+          <span class="label-with-select">Audio in</span>
+          <select name="list-audio-in" id="list-audio-in"></select>
+        </div>
+      </div>
+      <div class="audio-recording">
+        <span class="setting-label">Audio Recording</span>
+        <div id="record-from-playback">
+          <input type="radio" id="playback-recording" name="audio_recording">
+          <span>Record from playback</span>
+        </div>
+        <div class="record-from-mic">
+          <input type="radio" id="audio-recording" name="audio_recording">
+          <span>Record from mic</span>
+          <select name="list-mic-setting" id="list-mic-setting"></select>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 <input
     type="file"

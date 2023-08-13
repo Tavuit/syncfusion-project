@@ -1057,6 +1057,10 @@ math-field::part(virtual-keyboard-toggle) {
   width: 40%; /* Could be more or less, depending on screen size */
 }
 
+#settings-model > .modal-content {
+  gap: 24px;
+}
+
 .model-editor {
   background-color: #fefefe;
   margin: 46px auto;
@@ -1125,6 +1129,65 @@ math-field::part(virtual-keyboard-toggle) {
   font-size: 12px;
 }
 
+.video-recording, .audio-recording {
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  padding: 8px 8px 8px 16px;
+  position: relative;
+  line-height: 6ex;
+}
+
+.setting-label {
+  position: absolute;
+  top: -24px;
+  z-index: 1;
+  background-color: white;
+}
+
+.video-recording {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.video-recording > div {
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+gap: 8px;
+}
+
+.video-recording > div > span.label-with-select {
+flex: 0.5;
+}
+
+.video-recording > div > select{
+flex: 1;
+}
+
+/*----------------*/
+
+.audio-recording {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audio-recording > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.record-from-mic > span {
+  flex: 0.5;
+}
+.record-from-mic > select {
+  flex: 1;
+}
 #capture-image > .btn-content > .btn-preview {
   background-image: url('../icons/image/captureimageproject.png');
 }

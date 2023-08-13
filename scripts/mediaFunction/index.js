@@ -1,14 +1,25 @@
 // Get the modal
 var mediaModal = document.getElementById("media-modal");
 var editorModal = document.getElementById("editor-modal");
-
+var settingModel = document.getElementById("settings-model");
 // Get the close button
 var closeMediaBtn = mediaModal.querySelector(".close");
 var closeEditorBtn = editorModal.querySelector(".close");
+var closeSettingBtn = settingModel.querySelector(".close");
 
 var audioRecording = false;
+var audioOutputDevices = [];
+var audioInputDevices = [];
 
 // When the user clicks on the button, open the modal
+function openSettingModel() {
+  settingModel.style.display = "block";
+}
+
+function closeSettingModel() {
+  settingModel.style.display = "none";
+}
+
 function openMediaModal() {
   mediaModal.style.display = "block";
 }
@@ -32,7 +43,10 @@ closeMediaBtn.onclick = function () {
 closeEditorBtn.onclick = function () {
   editorModal.style.display = "none";
 }
-
+closeSettingBtn.onclick = function () {
+  settingModel.style.display = "none";
+  openMediaModal();
+}
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == mediaModal || event.target == editorModal) {
@@ -199,7 +213,47 @@ $(document).on("click", '#stop-record-audio', function() {
   mediaRecorder.stop();
 });
 
+$(document).on("click", "#settings", function () {
+  closeMediaModal();
+  openSettingModel();
+})
 
+function getDevices() {
+  // Check if the enumerateDevices method is available
+  if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+    // Enumerate devices
+    navigator.mediaDevices.enumerateDevices()
+      .then(devices => {
+        audioOutputDevices = devices.filter(device => device.kind === 'audiooutput');
+        audioInputDevices = devices.filter(device => device.kind === 'audioinput');
+        var audio_out_select = settingModel.querySelector("#list-audio-out");
+        var audio_in_select = settingModel.querySelector("#list-audio-in");
+        var mic_select = settingModel.querySelector("#list-mic-setting");
+        audioOutputDevices.forEach(item=>{
+          var option = document.createElement("option");
+          option.text = item['label'];
+          option.value = item['deviceId'];
+          audio_out_select.appendChild(option);
+        })
+        audioInputDevices.forEach(item=>{
+          var optionAudioIn = document.createElement("option");
+          var optionMicIn = document.createElement("option");
+          optionAudioIn.text = item['label'];
+          optionAudioIn.value = item['deviceId'];
+          audio_in_select.appendChild(optionAudioIn);
+          optionMicIn.text = item['label'];
+          optionMicIn.value = item['deviceId'];
+          mic_select.appendChild(optionMicIn);
+        })
+      })
+      .catch(error => {
+        console.error('Error enumerating devices:', error);
+      });
+  } else {
+    console.error('enumerateDevices not supported.');
+  }
+}
+getDevices();
 function getArea(start = null, end = null) {
   return new Promise((resolve) => {
     var container = document.getElementById("app-content");
