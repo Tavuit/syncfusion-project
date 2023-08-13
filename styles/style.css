@@ -1134,7 +1134,7 @@ math-field::part(virtual-keyboard-toggle) {
   border-radius: 4px;
   padding: 8px 8px 8px 16px;
   position: relative;
-  line-height: 6ex;
+  line-height: 32px;
 }
 
 .setting-label {
@@ -1159,7 +1159,7 @@ gap: 8px;
 }
 
 .video-recording > div > span.label-with-select {
-flex: 0.5;
+flex: 0.7;
 }
 
 .video-recording > div > select{
@@ -1183,7 +1183,7 @@ flex: 1;
 }
 
 .record-from-mic > span {
-  flex: 0.5;
+  flex: 0.7;
 }
 .record-from-mic > select {
   flex: 1;
