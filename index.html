@@ -2832,30 +2832,30 @@
       <div class="video-recording">
         <span class="setting-label">Video Recording</span>
         <div class="hardwareSettings">
-          <input type="checkbox" id="hardwareSettings">
+          <input type="checkbox" id="hardwareSettings" name="hardwareSettings">
           <span>Enable Hardware Encoding</span>
         </div>
         <div class="audioOutSettings">
-          <input type="checkbox" id="audio-out">
+          <input type="checkbox" id="audio-out" name="audioOut">
           <span class="label-with-select">Audio out</span>
-          <select name="list-audio-out" id="list-audio-out"></select>
+          <select name="list-audio-out" id="audio-out-selection"></select>
         </div>
         <div class="audioInSettings">
-          <input type="checkbox" id="audio-in">
+          <input type="checkbox" id="audio-in" name="audioIn">
           <span class="label-with-select">Audio in</span>
-          <select name="list-audio-in" id="list-audio-in"></select>
+          <select name="list-audio-in" id="audio-in-selection"></select>
         </div>
       </div>
       <div class="audio-recording">
         <span class="setting-label">Audio Recording</span>
         <div id="record-from-playback">
-          <input type="radio" id="playback-recording" name="audio_recording">
+          <input type="radio" id="audio-recording-playback" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="true">
           <span>Record from playback</span>
         </div>
         <div class="record-from-mic">
-          <input type="radio" id="audio-recording" name="audio_recording">
+          <input type="radio" id="audio-recording-mic" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="false">
           <span>Record from mic</span>
-          <select name="list-mic-setting" id="list-mic-setting"></select>
+          <select name="list-mic-setting" id="mic-setting-selection"></select>
         </div>
       </div>
     </div>

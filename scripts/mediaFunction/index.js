@@ -11,15 +11,101 @@ var audioRecording = false;
 var audioOutputDevices = [];
 var audioInputDevices = [];
 
-var hardwareEncording;
+var hardwareEncording = false;
 var videoDevice = {
-  output: null,
-  input: null
+  output: {
+    enable: false,
+    value: null
+  },
+  input: {
+    enable: false,
+    value: null
+  }
 }
 
 var audioDevice = {
-  playback: true,
+  playback: "true",
   mic: null
+}
+
+var STORAGE_KEY = "@SETTINGS"
+
+function saveSettings() {
+  const jsonSettings = {hardwareEncording, audioDevice, videoDevice};
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(jsonSettings));
+}
+
+function loadSettings() {
+  const settings = localStorage.getItem(STORAGE_KEY);
+  if (settings) {
+    jsonSettings = JSON.parse(settings);
+    hardwareEncording = !!jsonSettings['hardwareEncording'] ? jsonSettings['hardwareEncording'] : hardwareEncording;
+    if (!!jsonSettings['videoDevice']) {
+      videoDevice = jsonSettings['videoDevice'];
+    } else {
+      videoDevice = {
+        output: {
+          enable: false,
+          value: null
+        },
+        input: {
+          enable: false,
+          value: null
+        }
+      }
+    }
+    if (!!jsonSettings['audioDevice']) {
+      audioDevice = jsonSettings['audioDevice'];
+    } else {
+      audioDevice = {
+        playback: "true",
+        mic: null
+      }
+    }
+  }
+}
+
+function setSelectedValue(selectObj, valueToSet) {
+  for (var i = 0; i < selectObj.options.length; i++) {
+    if (selectObj.options[i].value == valueToSet) {
+      selectObj.options[i].selected = true;
+      return;
+    }
+  }
+}
+
+function disableVideoSetting() {
+  if (!videoDevice.output.enable) {
+    document.querySelector('#audio-out-selection').setAttribute('disabled', 'disabled');
+  } else {
+    document.querySelector('#audio-out-selection').removeAttribute('disabled');
+  }
+
+  if (!videoDevice.input.enable) {
+    document.querySelector('#audio-in-selection').setAttribute('disabled', 'disabled');
+  } else {
+    document.querySelector('#audio-in-selection').removeAttribute('disabled');
+  }
+}
+
+function bindDataSetting() {
+  document.querySelector("#hardwareSettings").checked = hardwareEncording;
+  document.querySelector("#audio-out").checked = videoDevice.output.enable;
+  document.querySelector("#audio-in").checked = videoDevice.input.enable;
+
+  setSelectedValue(document.querySelector("#audio-out-selection"), videoDevice.output.value);
+  setSelectedValue(document.querySelector("#audio-in-selection"), videoDevice.input.value);
+  setSelectedValue(document.querySelector("#mic-setting-selection"), audioDevice.mic);
+
+  disableVideoSetting();
+
+  if (audioDevice.playback === "true") {
+    document.querySelector("#audio-recording-playback").checked = true;
+    document.querySelector("#mic-setting-selection").setAttribute("disabled", "disabled");
+  }
+  if (audioDevice.playback === "false") {
+    document.querySelector("#audio-recording-mic").checked = true;
+  }
 }
 
 // When the user clicks on the button, open the modal
@@ -86,10 +172,13 @@ function dataURItoBlob(dataURI) {
 
 async function recordScreen(audio = true, video = true) {
   const constaints = {};
-  constaints['audio'] = audio;
-  constaints['video'] = !!video ? {mediaSource: "screen"} : false;
+  if (!!audio) {
+    constaints['audio'] = audio;
+  }
+  if (!!video) {
+    constaints['video'] = {mediaSource: "screen"}
+  }
   if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
-    console.log(constaints, 'containts')
     return await navigator.mediaDevices.getDisplayMedia(constaints);
   }
   return null
@@ -107,6 +196,7 @@ function createRecorder(stream) {
   mediaRecorder.onstop = function () {
     saveFileVideo(recordedChunks);
     recordedChunks = [];
+    stream.getTracks().forEach(item=>item.stop());
   };
   mediaRecorder.start(200);
   return mediaRecorder
@@ -121,9 +211,7 @@ async function createCapture(stream) {
   canvas.height = imageBitmap.height;
   canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
   const dataURL = canvas.toDataURL('image/png');
-  stream.getTracks().forEach(function (track) {
-    track.stop();
-  });
+  stream.getTracks().forEach(item=>item.stop());
   saveFileCapture(dataURL)
 }
 
@@ -157,7 +245,7 @@ function imageEditor(URL, fileName) {
 }
 
 $(document).on("click", `#record-video`, async function () {
-  let stream = await recordScreen();
+  let stream = await recordScreen(true, false);
   if (stream) {
     createRecorder(stream)
   } else {
@@ -166,7 +254,7 @@ $(document).on("click", `#record-video`, async function () {
 })
 
 $(document).on("click", `#capture-image`, async function () {
-  let stream = await recordScreen();
+  let stream = await recordScreen(true, false);
   if (stream) {
     await createCapture(stream)
   } else {
@@ -212,6 +300,7 @@ $(document).on("click", `#record-audio`, async function () {
         saveAs(blod, 'audio-record.mp3');
         this.style.display = "block"
         stopRecordAuto[0].style.display = "none";
+        stream.getTracks().forEach(item=>item.stop());
       }
       this.style.display = "none"
       stopRecordAuto[0].style.display = "block";
@@ -225,22 +314,73 @@ $(document).on("click", '#stop-record-audio', function () {
   mediaRecorder.stop();
 });
 
+$(document).on("change", '#hardwareSettings', function(event) {
+  hardwareEncording = document.querySelector("#hardwareSettings").checked;
+  saveSettings()
+})
+
+$(document).on("change", '#audio-out', function() {
+  videoDevice.output.enable = document.querySelector('#audio-out').checked;
+  disableVideoSetting()
+  saveSettings()
+})
+
+$(document).on("change", '#audio-in', function() {
+  videoDevice.input.enable = document.querySelector('#audio-in').checked;
+  disableVideoSetting()
+  saveSettings()
+})
+
+$(document).on("change", '#audio-out-selection', function() {
+  const selector  = document.querySelector('#audio-out-selection');
+  const value = selector.options[selector.selectedIndex].value;
+  videoDevice.output.value = value;
+  saveSettings()
+})
+
+$(document).on("change", '#audio-in-selection', function() {
+  const selector  = document.querySelector('#audio-in-selection');
+  const value = selector.options[selector.selectedIndex].value;
+  videoDevice.input.value = value;
+  saveSettings()
+})
+
+$(document).on("change", '#mic-setting-selection', function() {
+  const selector  = document.querySelector('#mic-setting-selection');
+  const value = selector.options[selector.selectedIndex].value;
+  audioDevice.mic = value
+  saveSettings()
+})
+
 $(document).on("click", "#settings", function () {
   closeMediaModal();
   openSettingModel();
 })
 
-function getDevices() {
+function handleOnChangeAudioOut(myRadio) {
+  audioDevice.playback = myRadio.value
+  if (audioDevice.playback == "true") {
+    document.querySelector("#mic-setting-selection").setAttribute("disabled", "disabled");
+  }
+  if (audioDevice.playback == "false") {
+    document.querySelector("#mic-setting-selection").removeAttribute("disabled");
+  }
+  saveSettings();
+}
+
+async function getDevices() {
   // Check if the enumerateDevices method is available
   if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
     // Enumerate devices
-    navigator.mediaDevices.enumerateDevices()
+    await navigator.mediaDevices.getUserMedia({audio: true, video: false});
+    await navigator.mediaDevices.enumerateDevices()
       .then(devices => {
+        devices = devices.filter(item=> item.deviceId != 'default');
         audioOutputDevices = devices.filter(device => device.kind === 'audiooutput');
         audioInputDevices = devices.filter(device => device.kind === 'audioinput');
-        var audio_out_select = settingModel.querySelector("#list-audio-out");
-        var audio_in_select = settingModel.querySelector("#list-audio-in");
-        var mic_select = settingModel.querySelector("#list-mic-setting");
+        var audio_out_select = settingModel.querySelector("#audio-out-selection");
+        var audio_in_select = settingModel.querySelector("#audio-in-selection");
+        var mic_select = settingModel.querySelector("#mic-setting-selection");
         audioOutputDevices.forEach(item => {
           var option = document.createElement("option");
           option.text = item['label'];
@@ -257,6 +397,10 @@ function getDevices() {
           optionMicIn.value = item['deviceId'];
           mic_select.appendChild(optionMicIn);
         })
+      })
+      .then(devices => {
+        loadSettings();
+        bindDataSetting()
       })
       .catch(error => {
         console.error('Error enumerating devices:', error);
