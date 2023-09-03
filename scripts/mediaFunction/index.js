@@ -88,6 +88,17 @@ function disableVideoSetting() {
   }
 }
 
+function disableAudioSetting() {
+  if (audioDevice.playback === "true") {
+    document.querySelector("#audio-recording-playback").checked = true;
+    document.querySelector("#mic-setting-selection").setAttribute("disabled", "disabled");
+  }
+  if (audioDevice.playback === "false") {
+    document.querySelector("#audio-recording-mic").checked = true;
+    document.querySelector("#mic-setting-selection").removeAttribute("disabled");
+  }
+}
+
 function bindDataSetting() {
   document.querySelector("#hardwareSettings").checked = hardwareEncording;
   document.querySelector("#audio-out").checked = videoDevice.output.enable;
@@ -98,14 +109,7 @@ function bindDataSetting() {
   setSelectedValue(document.querySelector("#mic-setting-selection"), audioDevice.mic);
 
   disableVideoSetting();
-
-  if (audioDevice.playback === "true") {
-    document.querySelector("#audio-recording-playback").checked = true;
-    document.querySelector("#mic-setting-selection").setAttribute("disabled", "disabled");
-  }
-  if (audioDevice.playback === "false") {
-    document.querySelector("#audio-recording-mic").checked = true;
-  }
+  disableAudioSetting()
 }
 
 // When the user clicks on the button, open the modal
@@ -359,12 +363,7 @@ $(document).on("click", "#settings", function () {
 
 function handleOnChangeAudioOut(myRadio) {
   audioDevice.playback = myRadio.value
-  if (audioDevice.playback == "true") {
-    document.querySelector("#mic-setting-selection").setAttribute("disabled", "disabled");
-  }
-  if (audioDevice.playback == "false") {
-    document.querySelector("#mic-setting-selection").removeAttribute("disabled");
-  }
+  disableAudioSetting()
   saveSettings();
 }
 
